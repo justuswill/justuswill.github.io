@@ -55,9 +55,9 @@ nav ul li a{
 		bottom: -6px;
 		transition: 0.5s;
 	}
-}
-nav ul li a:hover::after{
-	width: 100%;
+	&:hover::after {
+		width: 100%;
+	}
 }
 .header-text{
 	margin-top: 20%;
@@ -202,4 +202,109 @@ nav ul li a:hover::after{
 	/* #ffffff via http://localhost:63342/justuswill.github.io/index.html */
 	filter: invert(100%) sepia(1%) saturate(677%) hue-rotate(68deg) brightness(118%) contrast(100%);
 	margin-bottom: 20px;
+}
+
+/* publications */
+
+#publications{
+	padding: 30px;
+	color: #ababab;
+}
+.publications-year{
+	list-style: none;
+	padding: 0;
+	margin-top: 0;
+}
+.publications-year ol li{
+	list-style: none;
+	margin-top: 20px;
+}
+.publications-year .row{
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	flex-wrap: wrap;
+}
+.publications-year .col-attr{
+	flex-basis: 10%;
+}
+.publications-year .col-attr li{
+	display: inline-block;
+	margin-bottom: 5px;
+	margin-top: 0;
+	padding: 0.2rem 1rem 0.1rem;
+	border-radius: 2px;
+	color: #ffffff;
+}
+.publications-year .col-attr .base{
+	background-color: #ff3500;
+}
+.publications-year .col-attr .conference{
+	background-color: #ff7000;
+}
+.publications-year .col-attr .award{
+	background-color: #ff1000;
+}
+.publications-year .col-pub{
+	flex-basis: 80%;
+	padding-left: 50px;
+	font-size: 18px;
+}
+.publications-year .title{
+	font-weight: 700;
+	color: #ffffff;
+}
+.publications-year .published{
+	font-style: italic;
+}
+.publications-year .me{
+	text-decoration: underline;
+}
+.publications-year .links li{
+	font-size: 12px;
+	display: inline-block;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 2px;
+	margin-right: 7px;
+	margin-top: 0.5rem;
+	cursor: pointer;
+	&:hover{
+		border-color: #ff3500;
+	}
+	&:after{
+		content: '';
+		width: 0;
+	}
+}
+.publications-year .links li a{
+	text-decoration: none;
+	color: #ababab;
+	display: block;
+	padding: 0.2rem 1rem 0.1rem;
+	height: 100%;
+	width: 100%;
+	&:hover{
+		color: #ff3500;
+	}
+}
+.abstract{
+	border-style: dashed;
+	border-width: 1px;
+	border-color: #ababab;
+	margin-top: 1rem;
+	padding: 10px;
+	display: none;
+}
+.active-abstract-link{
+	border-color: #ff3500;
+}
+.abstract.active-abstract{
+	display: inline-block;
+}
+.icon-small{
+	width: 20px;
+	height: 20px;
+	/* #ffffff via http://localhost:63342/justuswill.github.io/index.html */
+	filter: invert(100%) sepia(1%) saturate(677%) hue-rotate(68deg) brightness(118%) contrast(100%);
 }
