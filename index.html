@@ -15,7 +15,6 @@
 <div id="header">
 	<div class="container">
 		<nav>
-			<!-- <img src="images/logo.png" class="logo"> -->
 			<ul>
 				<li><a href="#">Bio</a></li>
 				<li><a href="#">Experience</a></li>
@@ -23,11 +22,13 @@
 				<li><a href="#">Research</a></li>
 				<li><a href="#">Projects</a></li>
 				<li><a href="#">Contact</a></li>
+				<img class="menu-icon" id="menu-close" src="icons/close.svg" alt=""/>
 			</ul>
+			<img class="menu-icon" id="menu-open" src="icons/menu.svg" alt=""/>
 		</nav>
 		<div class="header-text">
-			<p> Machine Learning Researcher / PhD student </p>
-			<h1>Hi, I'm <span>Justus</span> Will.</h1>
+			<p> <span class="nobr">Machine Learning</span> Researcher <span class="nobr">/ PhD student </span></p>
+			<h1> <span class="nobr">Hi, I'm </span><span class="gradient">Justus</span> Will.</h1>
 		</div>
 	</div>
 </div>
@@ -58,10 +59,10 @@
 					<p class="tab-links" onclick="opentab('education')">Education</p>
 					<p class="tab-links" onclick="opentab('interests')">Interests</p>
 					-->
-					<p class="tab-links active-link" data-open="skills">Skills</p>
-					<p class="tab-links" data-open="languages">Languages</p>
-					<p class="tab-links" data-open="education">Education</p>
-					<p class="tab-links" data-open="interests">Interests</p>
+					<p class="tab-links active-link" id="t1" data-open="skills">Skills</p>
+					<p class="tab-links" id="t2" data-open="languages">Languages</p>
+					<p class="tab-links" id="t3" data-open="education">Education</p>
+					<p class="tab-links" id="t4" data-open="interests">Interests</p>
 				</div>
 				<div class="tab-contents active-tab" id="skills">
 					<ul>
@@ -211,8 +212,8 @@
 							<div class="links">
 								<ul>
 									<li class="abstract-expand" data-open="abs2"> <a>ABS</a> </li>
-									<!-- <li> <a href="https://arxiv.org/pdf/2306.08754.pdf" target="_blank" rel="noopener noreferrer">PDF</a> </li>
-									<li> <a href="https://github.com/leap-stc/ClimSim" target="_blank" rel="noopener noreferrer" >CODE</a> </li> -->
+									<li> <a href="https://arxiv.org/pdf/2310.20168v1.pdf" target="_blank" rel="noopener noreferrer">PDF</a> </li>
+									<!-- <li> <a href="https://github.com/leap-stc/ClimSim" target="_blank" rel="noopener noreferrer" >CODE</a> </li> -->
 								</ul>
 							</div>
 						</div>
@@ -232,11 +233,17 @@
 		<div class="project-list">
 			<div class="project">
 				<img src="images/project-2.png" alt=""/>
-				Style Transfer
+				<div class="layer">
+					<h3> Style Transfer </h3>
+					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+				</div>
 			</div>
 			<div class="project">
 				<img src="images/project-2.png" alt=""/>
-				OITC
+				<div class="layer">
+					<h3> OITC </h3>
+					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+				</div>
 			</div>
 			<div class="project">
 				<img src="images/project-1.gif" alt=""/>
@@ -247,9 +254,10 @@
 					that allows for fast and fully automated localization based on 3D CT scans, focusing on reliability and trustworthiness.
 					In-depth evaluation demonstrates high robustness to covariate shifts and feature visualizations make predictions explainable.
 					For this research, I was awarded a grant from the German Federal Ministry of Education and Research.
+					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
 				</div>
 			</div>
-			<div class="project">
+			<!-- <div class="project">
 				<img src="images/project-2.png" alt=""/>
 				Evolutionary algorithms
 			</div>
@@ -260,21 +268,52 @@
 			<div class="project">
 				<img src="images/project-2.png" alt=""/>
 				Website Kubernetes
-			</div>
+			</div> -->
 		</div>
+		<a href="" class="btn"> See More </a>
 	</div>
 </div>
 
-<div id="end">
+<!-- Footer -->
 
-</div>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-copyright">
+				<p>
+					&copy; Copyright
+					<span id="copyright">
+							<script>
+								document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+							</script>
+					</span>
+					Justus Will
+				</p>
+			</div>
+			<div class="col-social social">
+				<ul>
+					<li>
+						<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					</li>
+					<li>
+						<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					</li>
+					<li>
+						<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
 
 <script src='//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
 <script>
 	// highlight via illuminating effect
 	$(function() {
 		var bg_color = $('#header-animation').css('background-color');
-		var text_gradient = $('.header-text h1 span').css('background');
+		var text_gradient = $('.header-text h1 .gradient').css('background');
 		var text_style = {
 			'background': '',
 			'background-clip': 'text',
@@ -289,7 +328,7 @@
 		// var lightColor = 'rgba(30, 40, 48, 1.0)', gradientSize = 300;
 
 		$('#header').mousemove(function(e) {
-			text = $('.header-text h1 span')
+			text = $('.header-text h1 .gradient')
 			x  = e.pageX - this.offsetLeft;
 			y  = e.pageY - this.offsetTop;
 			xy = x + ' ' + y;
@@ -298,13 +337,13 @@
 			xt = e.pageX - (text.offset().left + text.width() / 2);
 			yt = e.pageY - (text.offset().top + text.height() / 2);
 			deg = Math.atan2(-xt, yt) * 180/Math.PI;
-			text_style['background'] = 'linear-gradient(' + deg + 'deg, #ff7000, #ff3500)'
+			text_style['background'] = 'linear-gradient(' + deg + 'deg, var(--main-color-bright), var(--main-color))'
 			$('#header-animation')
 					.css({ background: bgWebKit })
 					.css({ background: bgMoz });
 			text.css(text_style);
 		}).mouseleave(function() {
-			text = $('.header-text h1 span')
+			text = $('.header-text h1 .gradient')
 			$('#header-animation').css({ background: bg_color });
 			text.css({background: text_gradient});
 
@@ -337,6 +376,16 @@
 			abs.addClass('active-abstract');
 			$(this).addClass('active-abstract-link')
 		}
+	});
+
+	// open/close menu
+	$('#menu-open').on('click', function(){
+		$('nav ul').css({right: '0'});
+		$('#menu-open').css({width: '0'});
+	});
+	$('#menu-close').on('click', function(){
+		$('nav ul').css({right: '-200px'});
+		$('#menu-open').css({width: '30px'});
 	});
 </script>
 </body>
