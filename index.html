@@ -8,6 +8,7 @@
 	<meta name="description" content="I am a Machine Learning PhD student at UC Irvine
 	interested in neural data compression, deep generative models, and
 	their application to climate science.">
+
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,19 +16,20 @@
 <div id="header">
 	<div class="container">
 		<nav>
-			<!-- <img src="images/logo.png" class="logo"> -->
 			<ul>
-				<li><a href="#">Bio</a></li>
-				<li><a href="#">Experience</a></li>
-				<li><a href="#">Education</a></li>
-				<li><a href="#">Research</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="#bio" class="menu-close">Bio</a></li>
+				<li><a href="#bio" class="nav-open menu-close" data-open="experience" data-tab="t1">Experience</a></li>
+				<li><a href="#bio" class="nav-open menu-close" data-open="education" data-tab="t3">Education</a></li>
+				<li><a href="#research">Research</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="mailto:jcwill@uci.edu">Contact</a></li>
+				<img class="menu-icon menu-close" id="menu-close" src="icons/close.svg" alt=""/>
 			</ul>
+			<img class="menu-icon menu-open" id="menu-open" src="icons/menu.svg" alt=""/>
 		</nav>
 		<div class="header-text">
-			<p> Machine Learning Researcher / PhD student </p>
-			<h1>Hi, I'm <span>Justus</span> Will.</h1>
+			<p> <span class="nobr">Machine Learning</span> Researcher <span class="nobr">/ PhD student </span></p>
+			<h1> Hi, I'm <span class="nobr"><span class="gradient">Justus</span> Will.</span></h1>
 		</div>
 	</div>
 </div>
@@ -58,10 +60,28 @@
 					<p class="tab-links" onclick="opentab('education')">Education</p>
 					<p class="tab-links" onclick="opentab('interests')">Interests</p>
 					-->
-					<p class="tab-links active-link" data-open="skills">Skills</p>
-					<p class="tab-links" data-open="languages">Languages</p>
-					<p class="tab-links" data-open="education">Education</p>
-					<p class="tab-links" data-open="interests">Interests</p>
+					<p class="tab-links" id="t1" data-open="experience">Experience</p>
+					<p class="tab-links active-link" id="t2" data-open="skills">Skills</p>
+					<p class="tab-links" id="t3" data-open="education">Education</p>
+					<p class="tab-links" id="t4" data-open="languages">Languages</p>
+					<p class="tab-links" id="t5" data-open="interests">Interests</p>
+				</div>
+				<div class="tab-contents" id="experience">
+					<ul>
+						<li><span  class="skl">2017-2020</span> <br> <span class="metric">B.Sc.</span>  Mathematics,
+							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup>, Germany &minus;
+							GPA 1.1 (Intl: <a href="https://gpa.eng.uci.edu/node/437" target="_blank" rel="noopener noreferrer">3.92</a>) </li>
+						<li><span  class="skl">2017-2020</span> <br> <span class="metric">B.Sc.</span> Computer Science,
+							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup>, Germany &minus;
+							GPA 1.1 (Intl: <a href="https://gpa.eng.uci.edu/node/437" target="_blank" rel="noopener noreferrer">3.92</a>) </li>
+						<li><span  class="skl">2020-2022</span> <br> <span class="metric">M.Sc.</span> Mathematics,
+							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup>, Germany (and
+							<a href="https://www.lunduniversity.lu.se/" target="_blank" rel="noopener noreferrer">Lund University</a>, Sweden) &minus;
+							GPA 1.1 (Intl: <a href="https://gpa.eng.uci.edu/node/437" target="_blank" rel="noopener noreferrer">3.92</a>) </li>
+						<li><span  class="skl">2020-Current</span> <br> <span class="metric">Ph.D.</span> Computer Science,
+							<a href="https://uci.edu" target="_blank" rel="noopener noreferrer">UC Irvine</a>, USA </li>
+						<li class="footnote"> <sup>1</sup> Since 2023:  RPTU in Kaiserslautern </li>
+					</ul>
 				</div>
 				<div class="tab-contents active-tab" id="skills">
 					<ul>
@@ -127,35 +147,44 @@
 	</div>
 </div>
 
-<!-- Bio -->
+<!-- Research -->
 
 <div id="research">
 	<div class="container">
 		<h1 class="sub-title"> Research Interests </h1>
 		<div class="research-topics">
-			<div>
-				<img class="icon" src="icons/network.svg" alt=""/>
-				<h2> Deep Generative Models </h2>
-				<p>
-					Variational Autoencoder, GANs, Diffusion Models.
-				</p>
-				<a href="#"> learn more </a>
+			<div class="outer">
+				<div class="inner">
+					<img class="icon" src="icons/network.svg" alt=""/>
+				</div>
+				<div class="inner">
+					<h2> Deep Generative Models </h2>
+					<p>
+						Variational Autoencoder, GANs, Diffusion Models.
+					</p>
+				</div>
 			</div>
-			<div>
-				<img class="icon" src="icons/file.svg" alt=""/>
-				<h2> Neural Data Compression </h2>
-				<p>
-					Reverse Channel Coding, Faster
-				</p>
-				<a href="#"> learn more </a>
+			<div class="outer">
+				<div class="inner">
+					<img class="icon" src="icons/file.svg" alt=""/>
+				</div>
+				<div class="inner">
+					<h2> Neural Data Compression </h2>
+					<p>
+						Reverse Channel Coding, Faster
+					</p>
+				</div>
 			</div>
-			<div>
-				<img class="icon" src="icons/science.svg" alt=""/>
-				<h2> Machine Learning </br> and Science </h2>
-				<p>
-					Climate Science, Climate Modeling, Cloud Microphysics
-				</p>
-				<a href="#"> learn more </a>
+			<div class="outer">
+				<div class="inner">
+					<img class="icon" src="icons/science.svg" alt=""/>
+				</div>
+				<div class="inner">
+					<h2> Machine Learning </br> and Science </h2>
+					<p>
+						Climate Science, Climate Modeling, Cloud Microphysics
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -191,9 +220,9 @@
 								</ul>
 							</div>
 						</div>
-						<div class="abstract" id="abs1"> Modern climate projections lack adequate spatial and temporal resolution due to computational constraints. A consequence is inaccurate and imprecise predictions of critical processes such as storms. Hybrid methods that combine physics with machine learning (ML) have introduced a new generation of higher fidelity climate simulators that can sidestep Moore’s Law by outsourcing compute-hungry, short, high-resolution simulations to ML emulators. However, this hybrid ML-physics simulation approach requires domain-specific treatment and has been inaccessible to ML experts because of lack of training data and relevant, easy-to-use workflows. We present ClimSim, the largest-ever dataset designed for hybrid ML-physics research. It comprises multi-scale climate simulations, developed by a consortium of climate scientists and ML researchers. It consists of 5.7 billion pairs of multivariate input and output vectors that isolate the influence of locally-nested, high-resolution, high-fidelity physics on a host climate simulator’s macro-scale physical state. The dataset is global in coverage, spans multiple years at high sampling frequency, and is designed such that resulting emulators are compatible with downstream coupling into operational climate simulators. We implement a range of deterministic and stochastic regression baselines to highlight the ML challenges and their scoring. </div>
 					</div>
 				</li>
+				<div class="abstract" id="abs1"> Modern climate projections lack adequate spatial and temporal resolution due to computational constraints. A consequence is inaccurate and imprecise predictions of critical processes such as storms. Hybrid methods that combine physics with machine learning (ML) have introduced a new generation of higher fidelity climate simulators that can sidestep Moore’s Law by outsourcing compute-hungry, short, high-resolution simulations to ML emulators. However, this hybrid ML-physics simulation approach requires domain-specific treatment and has been inaccessible to ML experts because of lack of training data and relevant, easy-to-use workflows. We present ClimSim, the largest-ever dataset designed for hybrid ML-physics research. It comprises multi-scale climate simulations, developed by a consortium of climate scientists and ML researchers. It consists of 5.7 billion pairs of multivariate input and output vectors that isolate the influence of locally-nested, high-resolution, high-fidelity physics on a host climate simulator’s macro-scale physical state. The dataset is global in coverage, spans multiple years at high sampling frequency, and is designed such that resulting emulators are compatible with downstream coupling into operational climate simulators. We implement a range of deterministic and stochastic regression baselines to highlight the ML challenges and their scoring. </div>
 				<li>
 					<div class="row">
 						<div class="col-attr">
@@ -211,88 +240,135 @@
 							<div class="links">
 								<ul>
 									<li class="abstract-expand" data-open="abs2"> <a>ABS</a> </li>
-									<!-- <li> <a href="https://arxiv.org/pdf/2306.08754.pdf" target="_blank" rel="noopener noreferrer">PDF</a> </li>
-									<li> <a href="https://github.com/leap-stc/ClimSim" target="_blank" rel="noopener noreferrer" >CODE</a> </li> -->
+									<li> <a href="https://arxiv.org/pdf/2310.20168v1.pdf" target="_blank" rel="noopener noreferrer">PDF</a> </li>
+									<!-- <li> <a href="https://github.com/leap-stc/ClimSim" target="_blank" rel="noopener noreferrer" >CODE</a> </li> -->
 								</ul>
 							</div>
 						</div>
-						<div class="abstract" id="abs2"> Thorough analysis of local droplet-level interactions is crucial to better understand the microphysical processes in clouds and their effect on the global climate. High-accuracy simulations of relevant droplet size distributions from Large Eddy Simulations (LES) of bin microphysics challenge current analysis techniques due to their high dimensionality involving three spatial dimensions, time, and a continuous range of droplet sizes. Utilizing the compact latent representations from Variational Autoencoders (VAEs), we produce novel and intuitive visualizations for the organization of droplet sizes and their evolution over time beyond what is possible with clustering techniques. This greatly improves interpretation and allows us to examine aerosol-cloud interactions by contrasting simulations with different aerosol concentrations. We find that the evolution of the droplet spectrum is similar across aerosol levels but occurs at different paces. This similarity suggests that precipitation initiation processes are alike despite variations in onset times. </div>
 					</div>
 				</li>
+				<div class="abstract" id="abs2"> Thorough analysis of local droplet-level interactions is crucial to better understand the microphysical processes in clouds and their effect on the global climate. High-accuracy simulations of relevant droplet size distributions from Large Eddy Simulations (LES) of bin microphysics challenge current analysis techniques due to their high dimensionality involving three spatial dimensions, time, and a continuous range of droplet sizes. Utilizing the compact latent representations from Variational Autoencoders (VAEs), we produce novel and intuitive visualizations for the organization of droplet sizes and their evolution over time beyond what is possible with clustering techniques. This greatly improves interpretation and allows us to examine aerosol-cloud interactions by contrasting simulations with different aerosol concentrations. We find that the evolution of the droplet spectrum is similar across aerosol levels but occurs at different paces. This similarity suggests that precipitation initiation processes are alike despite variations in onset times. </div>
 			</ol>
 		</div>
 	</div>
 </div>
 
+<!-- Projects -->
+
+<div id="projects">
+	<div class="container">
+		<h1 class="sub-title"> Selected Projects </h1>
+		<div class="project-list">
+			<div class="project active-project start-project">
+				<img class="bg-img" src="images/project-1.png" alt=""/>
+				<div class="layer">
+					<h3> Time Series Style Transfer </h3>
+					<span>
+						Time Series go brrrrrrrrrrrrrrrrrrr rrrrrrrrrrrrrrrrrrrrrrrr.
+					</span>
+					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					<img class="icon-small icon-more" src="icons/more.svg" alt="MORE"/>
+				</div>
+			</div>
+			<div class="project active-project start-project">
+				<img class="bg-img" src="images/project-2.gif" alt=""/>
+				<div class="layer">
+					<h3> Detecting Faulty Concrete </h3>
+					<span>
+						Non-intrusive early detection of cracks in concrete is a crucial task in construction and maintenance.
+						In collaboration with the Fraunhofer Institute for Industrial Mathematics (ITWM) we developed a computer vision framework
+						that allows for fast and fully automated localization based on 3D CT scans, focusing on reliability and trustworthiness.
+						<!-- In-depth evaluation demonstrates high robustness to covariate shifts and feature visualizations make predictions explainable.
+                        For this research, I was awarded a grant from the German Federal Ministry of Education and Research. -->
+					</span>
+					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					<img class="icon-small icon-more" src="icons/more.svg" alt="MORE"/>
+				</div>
+			</div>
+			<div class="project active-project start-project">
+				<img class="bg-img" src="images/project-3.gif" alt=""/>
+				<div class="layer">
+					<h3> Orthogonal Inductive
+						Tensor Completion </h3>
+					<span>
+						 Missing entries be no longer missing fr.
+					</span>
+					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					<img class="icon-small icon-more" src="icons/more.svg" alt="MORE"/>
+				</div>
+			</div>
+			<div class="project">
+				<img class="bg-img" src="images/project-4.png" alt=""/>
+				<div class="layer">
+					<h3> ConvNEAT </h3>
+					<span>
+						 Why select best by hand if you don't have to do it.
+					</span>
+					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					<img class="icon-small icon-more" src="icons/more.svg" alt="MORE"/>
+				</div>
+			</div>
+			<div class="project">
+				<img class="bg-img" src="images/project-5.png" alt=""/>
+				<div class="layer">
+					<h3> Walk Flow </h3>
+					<span>
+						 tip tap tip tap tip tap.
+					</span>
+					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					<img class="icon-small icon-more" src="icons/more.svg" alt="MORE"/>
+				</div>
+			</div>
+			<div class="project">
+				<img class="bg-img" src="images/project-6.png" alt=""/>
+				<div class="layer">
+					<h3> GPU Allocation UI </h3>
+					<span>
+						 Kubernetes + Docker + Full-Stack Web Development = Fun
+					</span>
+					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					<img class="icon-small icon-more" src="icons/more.svg" alt="MORE"/>
+				</div>
+			</div>
+		</div>
+		<a class="btn"> View <span id="btn-open">More</span><span id="btn-close">Less</span> Projects </a>
+	</div>
+</div>
+
+<!-- Footer -->
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-copyright">
+				<p>
+					&copy; Copyright
+					<span id="copyright">
+							<script>
+								document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+							</script>
+					</span>
+					Justus Will
+				</p>
+			</div>
+			<div class="col-social social">
+				<ul>
+					<li>
+						<a href="mailto:jcwill@uci.edu" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/mail.svg" alt="CODE"/></a>
+					</li>
+					<li>
+						<a href="https://github.com/justuswill" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/github.svg" alt="CODE"/></a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/justuswill/" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/linkedin.svg" alt="CODE"/></a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
 <script src='//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
-<script>
-	// highlight via illuminating effect
-	$(function() {
-		var bg_color = $('#header-animation').css('background-color');
-		var text_gradient = $('.header-text h1 span').css('background');
-		var text_style = {
-			'background': '',
-			'background-clip': 'text',
-			'-webkit-background-clip': 'text',
-			'-moz-background-clip': 'text',
-			'-moz-text-fill-color': 'transparent',
-			'-webkit-text-fill-color': 'transparent'
-		};
-		var x, y, xy, bgWebKit, bgMoz;
-		var xt, yt, deg
-		var lightColor = 'rgba(28, 52, 72, 1.0)', gradientSize = 300;
-		// var lightColor = 'rgba(30, 40, 48, 1.0)', gradientSize = 300;
-
-		$('#header').mousemove(function(e) {
-			text = $('.header-text h1 span')
-			x  = e.pageX - this.offsetLeft;
-			y  = e.pageY - this.offsetTop;
-			xy = x + ' ' + y;
-			bgWebKit = '-webkit-gradient(radial, ' + xy + ', 0, ' + xy + ', ' + gradientSize + ', from(' + lightColor + '), to(rgba(255,255,255,0.0))), ' + bg_color;
-			bgMoz    = '-moz-radial-gradient(' + x + 'px ' + y + 'px 45deg, circle, ' + lightColor + ' 0%, ' + bg_color + ' ' + gradientSize + 'px)';
-			xt = e.pageX - (text.offset().left + text.width() / 2);
-			yt = e.pageY - (text.offset().top + text.height() / 2);
-			deg = Math.atan2(-xt, yt) * 180/Math.PI;
-			text_style['background'] = 'linear-gradient(' + deg + 'deg, #ff7000, #ff3500)'
-			$('#header-animation')
-					.css({ background: bgWebKit })
-					.css({ background: bgMoz });
-			text.css(text_style);
-		}).mouseleave(function() {
-			text = $('.header-text h1 span')
-			$('#header-animation').css({ background: bg_color });
-			text.css({background: text_gradient});
-
-			text_style['background'] = text_gradient
-			text.css(text_style);
-		});
-	});
-
-	// active tabs
-	$('.tab-links').on('click', function(){
-		$('.tab-links').each(function(){
-			$(this).removeClass('active-link');
-		});
-		$('.tab-contents').each(function(){
-			$(this).removeClass('active-tab');
-		});
-		$(this).addClass('active-link');
-		$('#' + $(this).attr('data-open')).addClass('active-tab');
-	});
-
-	// expand abstract
-	$('.abstract-expand').on('click', function(){
-		var abs = $('#' + $(this).attr('data-open'));
-		if (abs.hasClass('active-abstract')){
-			abs.removeClass('active-abstract');
-			$(this).removeClass('active-abstract-link')
-
-		}
-		else{
-			abs.addClass('active-abstract');
-			$(this).addClass('active-abstract-link')
-		}
-	});
-</script>
+<script type="text/javascript" src="code.js"></script>
 </body>
 </html>
