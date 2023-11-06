@@ -1,5 +1,39 @@
 // Responsive website features
 
+// dynamically detect if device uses touch to disable some hover effects
+// from http://www.javascriptkit.com/dhtmltutors/sticky-hover-issue-solutions.shtml#:~:text=4%20novel%20ways%20to%20deal%20with%20sticky%20%3Ahover,class%20based%20on%20current%20user%20input%20type%20
+;(function(){
+    var isTouch = false
+    var isTouchTimer
+    var curRootClass = 'cannot-touch'
+    document.documentElement.classList.add(curRootClass)
+
+    function addtouchclass(e){
+        clearTimeout(isTouchTimer)
+        if (curRootClass !== 'can-touch'){
+            document.documentElement.classList.remove(curRootClass)
+            curRootClass = 'can-touch'
+            document.documentElement.classList.add(curRootClass)
+        }
+        // set isTouch for 500ms, so class doesn't change on subsequent mouseover
+        isTouch = true
+        isTouchTimer = setTimeout(function(){isTouch = false}, 500)
+    }
+
+    function removetouchclass(e){
+        if (!isTouch && curRootClass === 'can-touch'){
+            isTouch = false
+            document.documentElement.classList.remove(curRootClass)
+            curRootClass = 'cannot-touch'
+            document.documentElement.classList.add(curRootClass)
+        }
+    }
+
+    document.addEventListener('touchstart', addtouchclass, false)
+    document.addEventListener('mouseover', removetouchclass, false)
+})();
+
+
 // Highlight via illuminating effect
 $(function() {
     var bg_color = $('#header-animation').css('background-color');

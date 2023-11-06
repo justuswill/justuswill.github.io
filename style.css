@@ -386,11 +386,13 @@ nav ul li a{
 	grid-gap: 40px;
 	margin-top: 50px;
 }
-.project{
+.project {
 	border-radius: 10px;
 	position: relative;
 	overflow: hidden;
 	display: none;
+}
+html.cannot-touch .project{
 	&:hover .bg-img{
 		transform: scale(1.1);
 		transition: 0.2s;
@@ -638,14 +640,14 @@ footer{
 	.bio-col-1{
 		padding: 0 10vw;
 	}
-	.publications-year .row {
+	.publications-year .row{
 		display: block;
 	}
 	.publications-year .col-pub{
 		padding: 0;
 	}
 	.project span{
-		height: 0;
+		max-height: 0;
 	}
 	.layer{
 		height: 30%;
@@ -657,38 +659,87 @@ footer{
 	.layer .icon-small{
 		height: 0;
 		transition: 0s;
+		transition-delay: 0s;
 	}
 	.layer .icon-small.icon-more{
 		height: 50px;
 		margin: -10px 0;
 		transition: 0.5s;
+		transition-delay: 0s;
 	}
-	.project{
-		&:hover span{
-			height: auto;
-			transition-delay: 0.2s;
-		}
-		&:hover .icon-small{
-			height: 50px;
-		}
-		&:hover .icon-small.icon-more{
-			height: 0;
-			margin-top: 0;
-		}
+	.project.open-project span, .project:hover span{
+		max-height: 5000px;
+		transition-delay: 0.2s;
+	}
+	.project.open-project .icon-small, .project:hover .icon-small{
+		height: 50px;
+		transition-delay: 0.3s;
+	}
+	.project.open-project .icon-small.icon-more, .project:hover .icon-small.icon-more{
+		height: 0;
+		margin-top: 0;
+		transition-delay: 0s;
+	}
+}
+html.can-touch{
+	.project span{
+		max-height: 0;
+	}
+	.layer{
+		height: 30%;
+		opacity: 100%;
+	}
+	.layer a{
+		height: 0;
+	}
+	.layer .icon-small{
+		height: 0;
+		transition: 0s;
+		transition-delay: 0s;
+	}
+	.layer .icon-small.icon-more{
+		height: 50px;
+		margin: -10px 0;
+		transition: 0.5s;
+		transition-delay: 0s;
 	}
 	.project.open-project span{
-		height: auto;
+		max-height: 5000px;
+		transition: 0.3s;
+		transition-delay: 0.2s;
 	}
 	.project.open-project .icon-small{
 		height: 50px;
+		transition-delay: 0.3s;
 	}
-	.project.open-project .icon-small.icon-more {
+	.project.open-project .icon-small.icon-more{
 		height: 0;
 		margin-top: 0;
+		transition-delay: 0s;
 	}
+	/*html.cannot-touch .project{
+		 &:hover .layer{
+			 height: 100%;
+			 transition: 0.3s;
+			 transition-delay: 0.2s;
+		 }
+		 &:hover span{
+			 opacity: 100%;
+			 transition: 0.3s;
+			 transition-delay: 0.2s;
+		 }
+	 }
+	 .project.open-project .layer{
+		height: 100%;
+		transition: 0.3s;
+		transition-delay: 0.2s;
+	}
+	.project.open-project .layer span{
+		opacity: 100%;
+	}*/
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px){
 
 	/* smallest margins */
 
