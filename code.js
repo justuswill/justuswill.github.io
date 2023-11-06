@@ -79,9 +79,39 @@ $('.abstract-expand').on('click', function(){
 });
 
 //active projects
-$('.btn').on('click', function(){
-    $('.project').each(function(){
-        $(this).addClass('active-project');
+$(function(){
+    var open = false;
+    $('.btn').on('click', function(){
+        if(!open){
+            $('.project').each(function(){
+                $(this).addClass('active-project');
+            });
+            $('#btn-open').css({display: 'none'});
+            $('#btn-close').css({display: 'inline'});
+            open = true;
+        }
+        else{
+            $('.project').each(function(){
+                if(!$(this).hasClass('start-project')){
+                    $(this).removeClass('active-project');
+                }
+            });
+            $('#btn-open').css({display: 'inline'});
+            $('#btn-close').css({display: 'none'});
+            open = false;
+        }
+    });
+    $('.layer').on('click', function (){
+        let proj = $(this).parent();
+        if(proj.hasClass('open-project')){
+            proj.removeClass('open-project');
+        }
+        else{
+            $('.project').each(function (){
+                $(this).removeClass('open-project');
+            });
+            proj.addClass('open-project');
+        }
     });
 });
 

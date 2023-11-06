@@ -3,8 +3,8 @@
 	--intro-background-color: #0e1a24;
 	--background-color: #080808;
 	--highlight-background-color: #262626;
-	--font-color: #ffffff;
-	--sub-font-color: #ababab;;
+	--color-font: #ffffff;
+	--color-font-sub: #ababab;;
 	--main-color: #ff3500;
 	--main-color-bright: #ff7000;
 	--main-color-dark: #cc2900;
@@ -45,7 +45,7 @@ html{
 }
 body{
 	background: var(--background-color);
-	color: var(--font-color);
+	color: var(--color-font);
 }
 #header{
 	width: 100%;
@@ -81,7 +81,7 @@ nav ul li{
 	margin: 10px 20px;
 }
 nav ul li a{
-	color: var(--font-color);
+	color: var(--color-font);
 	text-decoration: none;
 	font-size: var(--font-header);
 	position: relative;
@@ -129,7 +129,7 @@ nav ul li a{
 
 #bio{
 	padding: 80px 0 30px;
-	color: var(--sub-font-color);
+	color: var(--color-font-sub);
 	top: -100vh;
 }
 .row{
@@ -155,26 +155,26 @@ nav ul li a{
 .sub-title{
 	font-size: var(--font-title);
 	font-weight: 600;
-	color: var(--font-color)
+	color: var(--color-font)
 }
 .tab-titles{
 	display: flex;
 	margin: 30px 0 50px;
 }
 #t1:hover{
-	color: var(--font-color);
+	color: var(--color-font);
 }
 #t2:hover{
-	color: var(--font-color);
+	color: var(--color-font);
 }
 #t3:hover{
-	color: var(--font-color);
+	color: var(--color-font);
 }
 #t4:hover{
-	color: var(--font-color);
+	color: var(--color-font);
 }
 #t5:hover{
-	color: var(--font-color);
+	color: var(--color-font);
 }
 .tab-links{
 	margin-right: 50px;
@@ -210,14 +210,14 @@ nav ul li a{
 	font-size: var(--font-footnote);
 }
 .tab-contents a{
-	color: var(--sub-font-color);
+	color: var(--color-font-sub);
 }
 .skl{
 	color: var(--main-color-dark);
 	font-size: var(--font-small);
 }
 .metric{
-	color: var(--font-color);
+	color: var(--color-font);
 }
 .footnote{
 	padding-top: 50px;
@@ -238,7 +238,7 @@ nav ul li a{
 .research-topics .outer{
 	display: block;
 	background: var(--highlight-background-color);
-	color: var(--sub-font-color);
+	color: var(--color-font-sub);
 	padding: 40px;
 	font-size: var(--font-main);
 	border-radius: 10px;
@@ -249,7 +249,7 @@ nav ul li a{
 	}
 }
 .research-topics div h2{
-	color: var(--font-color);
+	color: var(--color-font);
 	font-size: var(--font-subtitle);
 	font-weight: 500;
 	margin-bottom: 10px;
@@ -273,7 +273,7 @@ nav ul li a{
 
 #publications{
 	padding: 30px;
-	color: var(--sub-font-color);
+	color: var(--color-font-sub);
 }
 #publications .container{
 	padding-right: 5%;
@@ -303,7 +303,7 @@ nav ul li a{
 	margin-top: 0;
 	padding: 0.2rem 1rem 0.1rem;
 	border-radius: 2px;
-	color: var(--font-color);
+	color: var(--color-font);
 }
 .publications-year .col-attr .base{
 	background-color: var(--main-color);
@@ -321,7 +321,7 @@ nav ul li a{
 }
 .publications-year .title{
 	font-weight: 700;
-	color: var(--font-color);
+	color: var(--color-font);
 }
 .publications-year .published{
 	font-style: italic;
@@ -349,7 +349,7 @@ nav ul li a{
 }
 .publications-year .links li a{
 	text-decoration: none;
-	color: var(--sub-font-color);
+	color: var(--color-font-sub);
 	display: block;
 	padding: 0.2rem 1rem 0.1rem;
 	height: 100%;
@@ -362,7 +362,7 @@ nav ul li a{
 .abstract{
 	border-style: dashed;
 	border-width: 1px;
-	border-color: var(--sub-font-color);
+	border-color: var(--color-font-sub);
 	font-size: var(--font-main);
 	margin-top: 1rem;
 	padding: 10px;
@@ -382,7 +382,7 @@ nav ul li a{
 }
 .project-list{
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-gap: 40px;
 	margin-top: 50px;
 }
@@ -391,11 +391,19 @@ nav ul li a{
 	position: relative;
 	overflow: hidden;
 	display: none;
-	&:hover img{
+	&:hover .bg-img{
 		transform: scale(1.1);
+		transition: 0.2s;
 	}
 	&:hover .layer{
 		height: 100%;
+		transition: 0.3s;
+		transition-delay: 0.2s;
+	}
+	&:hover span{
+		opacity: 100%;
+		transition: 0.3s;
+		transition-delay: 0.2s;
 	}
 }
 .project.active-project{
@@ -415,7 +423,7 @@ nav ul li a{
 		color-mix(in srgb, var(--highlight-background-color) 99%, transparent),
 		var(--highlight-background-color)
 	);
-	border-radius: 10px;
+	border-radius: 5px;
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -426,14 +434,26 @@ nav ul li a{
 	flex-direction: column;
 	padding: 0 20px;
 	text-align: left;
-	font-size: var(--font-main);
+	font-size: var(--font-small);
+	color: var(--color-font-sub);
 	transition: 0.3s;
-	transition-delay: 0.3s;
+}
+.project.open-project .layer{
+	height: 100%;
+	transition: 0.3s;
+	transition-delay: 0.2s;
 }
 .layer h3{
 	font-weight: 500;
-	margin-bottom: 20px;
 	font-size: var(--font-subtitle);
+	color: var(--color-font)
+}
+.layer span{
+	margin-top: 20px;
+	opacity: 0;
+}
+.project.open-project .layer span{
+	opacity: 100%;
 }
 .layer .icon-small{
 	width: 50px;
@@ -441,6 +461,10 @@ nav ul li a{
 	/* #ffffff via http://localhost:63342/justuswill.github.io/index.html */
 	filter: invert(100%) sepia(1%) saturate(677%) hue-rotate(68deg) brightness(118%) contrast(100%);
 	margin-top: 20px;
+}
+.layer .icon-small.icon-more{
+	height: 0;
+	margin-top: 0;
 }
 .btn{
 	display: block;
@@ -457,6 +481,9 @@ nav ul li a{
 		color: #ff3500;
 		border-color: #ff3500;
 	}
+}
+#btn-close{
+	display: none;
 }
 
 /* Footer */
@@ -566,7 +593,7 @@ footer{
 
 @media only screen and (max-width: 900px) {
 
-	/* collapse header */
+	/* collapse header, publications, research */
 
 	.container{
 		padding: 10px 5%;
@@ -616,6 +643,48 @@ footer{
 	}
 	.publications-year .col-pub{
 		padding: 0;
+	}
+	.project span{
+		height: 0;
+	}
+	.layer{
+		height: 30%;
+		opacity: 100%;
+	}
+	.layer a{
+		height: 0;
+	}
+	.layer .icon-small{
+		height: 0;
+		transition: 0s;
+	}
+	.layer .icon-small.icon-more{
+		height: 50px;
+		margin: -10px 0;
+		transition: 0.5s;
+	}
+	.project{
+		&:hover span{
+			height: auto;
+			transition-delay: 0.2s;
+		}
+		&:hover .icon-small{
+			height: 50px;
+		}
+		&:hover .icon-small.icon-more{
+			height: 0;
+			margin-top: 0;
+		}
+	}
+	.project.open-project span{
+		height: auto;
+	}
+	.project.open-project .icon-small{
+		height: 50px;
+	}
+	.project.open-project .icon-small.icon-more {
+		height: 0;
+		margin-top: 0;
 	}
 }
 
