@@ -54,6 +54,7 @@ body{
 	background-size: cover;
 	background-position: 75%;
 	background-position-x: 75%;
+	background-position-y: 0;
 	background-attachment: fixed;
 	position: relative;
 	overflow: hidden;
@@ -769,6 +770,7 @@ html.can-touch{
 	#header{
 		background-position: 65%;
 		background-position-x: 65%;
+		background-position-y: 0;
 	}
 }
 
