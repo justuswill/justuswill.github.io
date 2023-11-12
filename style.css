@@ -152,6 +152,9 @@ nav ul li a{
 	color: var(--main-color);
 	text-decoration: none;
 }
+#bio-text{
+	scroll-margin-top: 80px;
+}
 .sub-title{
 	font-size: var(--font-title);
 	font-weight: 600;
