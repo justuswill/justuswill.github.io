@@ -53,6 +53,7 @@ body{
 	background-image: url("images/background.png");
 	background-size: cover;
 	background-position: 75%;
+	background-position-x: 75%;
 	background-attachment: fixed;
 	position: relative;
 	overflow: hidden;
