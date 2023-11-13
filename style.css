@@ -122,8 +122,6 @@ nav ul li a{
 	background: linear-gradient(45deg, var(--main-color-bright), var(--main-color));
 	background-clip: text;
 	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-moz-text-fill-color: transparent;
 	-webkit-text-fill-color: transparent;
 }
 
