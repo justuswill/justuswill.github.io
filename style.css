@@ -56,6 +56,7 @@ body{
 	background-position-x: 75%;
 	background-position-y: 0;
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 	position: relative;
 	overflow: hidden;
 	top: -100vh;
@@ -87,19 +88,19 @@ nav ul li a{
 	text-decoration: none;
 	font-size: var(--font-header);
 	position: relative;
-	&:after {
-		content: '';
-		width: 0;
-		height: 3px;
-		background: var(--main-color);
-		position: absolute;
-		left: 0;
-		bottom: -6px;
-		transition: 0.5s;
-	}
-	&:hover::after {
-		width: 100%;
-	}
+}
+nav ul li a:after{
+	content: '';
+	width: 0;
+	height: 3px;
+	background: var(--main-color);
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	transition: 0.5s;
+}
+nav ul li a:hover::after {
+	width: 100%;
 }
 .menu-icon{
 	width: 0;
@@ -179,22 +180,22 @@ nav ul li a{
 #t5:hover{
 	color: var(--color-font);
 }
-.tab-links{
+.tab-links {
 	margin-right: 50px;
 	font-size: var(--font-subtitle);
 	font-weight: 500;
 	cursor: pointer;
 	position: relative;
-	&:after {
-		content: '';
-		width: 0;
-		height: 3px;
-		background: var(--main-color);
-		position: absolute;
-		left: 0;
-		bottom: -8px;
-		transition: 0.5s;
-	}
+}
+.tab-links:after {
+	content: '';
+	width: 0;
+	height: 3px;
+	background: var(--main-color);
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	transition: 0.5s;
 }
 .tab-links.active-link::after{
 	width: 50%;
@@ -238,7 +239,7 @@ nav ul li a{
 	grid-gap: 40px;
 	margin-top: 50px;
 }
-.research-topics .outer{
+.research-topics .outer {
 	display: block;
 	background: var(--highlight-background-color);
 	color: var(--color-font-sub);
@@ -246,10 +247,10 @@ nav ul li a{
 	font-size: var(--font-main);
 	border-radius: 10px;
 	transition: background 0.5s, transform 0.5s;
-	&:hover{
-		background: var(--main-color);
-		transform: translateY(-10px);
-	}
+}
+.research-topics .outer:hover{
+	background: var(--main-color);
+	transform: translateY(-10px);
 }
 .research-topics div h2{
 	color: var(--color-font);
@@ -298,7 +299,7 @@ nav ul li a{
 	padding: 0;
 }
 .publications-year .col-attr{
-	flex-basis: 10%;
+	flex-basis: max(10%, 7.5rem);
 }
 .publications-year .col-attr li{
 	display: inline-block;
@@ -332,7 +333,7 @@ nav ul li a{
 .publications-year .me{
 	text-decoration: underline;
 }
-.publications-year .links li{
+.publications-year .links li {
 	font-size: var(--font-small);
 	display: inline-block;
 	border-style: solid;
@@ -342,13 +343,13 @@ nav ul li a{
 	margin-top: 0.5rem;
 	cursor: pointer;
 	transition: 0.1s;
-	&:hover{
-		border-color: var(--main-color);
-	}
-	&:after{
-		content: '';
-		width: 0;
-	}
+}
+.publications-year .links li:hover{
+	border-color: var(--main-color);
+}
+.publications-year .links li:after{
+	content: '';
+	width: 0;
 }
 .publications-year .links li a{
 	text-decoration: none;
@@ -396,21 +397,19 @@ nav ul li a{
 	overflow: hidden;
 	display: none;
 }
-html.cannot-touch .project{
-	&:hover .bg-img{
-		transform: scale(1.1);
-		transition: 0.2s;
-	}
-	&:hover .layer{
-		height: 100%;
-		transition: 0.3s;
-		transition-delay: 0.2s;
-	}
-	&:hover span{
-		opacity: 100%;
-		transition: 0.3s;
-		transition-delay: 0.2s;
-	}
+html.cannot-touch .project:hover .bg-img{
+	transform: scale(1.1);
+	transition: 0.2s;
+}
+html.cannot-touch .project:hover .layer{
+	height: 100%;
+	transition: 0.3s;
+	transition-delay: 0.2s;
+}
+html.cannot-touch .project:hover span{
+	opacity: 100%;
+	transition: 0.3s;
+	transition-delay: 0.2s;
 }
 .project.active-project{
 	display: block;
@@ -472,7 +471,7 @@ html.cannot-touch .project{
 	height: 0;
 	margin-top: 0;
 }
-.btn{
+.btn {
 	display: block;
 	margin: 50px auto;
 	width: fit-content;
@@ -483,10 +482,10 @@ html.cannot-touch .project{
 	color: #fff;
 	text-decoration: none;
 	transition: 0.1s;
-	&:hover{
-		color: #ff3500;
-		border-color: #ff3500;
-	}
+}
+.btn:hover{
+	color: #ff3500;
+	border-color: #ff3500;
 }
 #btn-close{
 	display: none;
@@ -721,26 +720,6 @@ html.can-touch{
 		margin-top: 0;
 		transition-delay: 0s;
 	}
-	/*html.cannot-touch .project{
-		 &:hover .layer{
-			 height: 100%;
-			 transition: 0.3s;
-			 transition-delay: 0.2s;
-		 }
-		 &:hover span{
-			 opacity: 100%;
-			 transition: 0.3s;
-			 transition-delay: 0.2s;
-		 }
-	 }
-	 .project.open-project .layer{
-		height: 100%;
-		transition: 0.3s;
-		transition-delay: 0.2s;
-	}
-	.project.open-project .layer span{
-		opacity: 100%;
-	}*/
 }
 
 @media only screen and (max-width: 600px){

@@ -26,7 +26,7 @@
 				<li><a href="#research" class="menu-close">Research</a></li>
 				<li><a href="#projects" class="menu-close">Projects</a></li>
 				<li><a href="mailto:jcwill@uci.edu">Contact</a></li>
-				<img class="menu-icon menu-close" id="menu-close" src="icons/close.svg" alt=""/>
+				<li><img class="menu-icon menu-close" id="menu-close" src="icons/close.svg" alt=""/></li>
 			</ul>
 			<img class="menu-icon menu-open" id="menu-open" src="icons/menu.svg" alt=""/>
 		</nav>
@@ -57,12 +57,6 @@
 					and the application of Machine Learning to Climate Science.
 				</p>
 				<div class="tab-titles">
-					<!--
-					<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-					<p class="tab-links" onclick="opentab('languages')">Languages</p>
-					<p class="tab-links" onclick="opentab('education')">Education</p>
-					<p class="tab-links" onclick="opentab('interests')">Interests</p>
-					-->
 					<p class="tab-links" id="t1" data-open="experience">Experience</p>
 					<p class="tab-links active-link" id="t2" data-open="skills">Skills</p>
 					<p class="tab-links" id="t3" data-open="education">Education</p>
@@ -183,7 +177,7 @@
 					<img class="icon" src="icons/science.svg" alt=""/>
 				</div>
 				<div class="inner">
-					<h2> Machine Learning </br> and Science </h2>
+					<h2> Machine Learning <br> and Science </h2>
 					<p>
 						Climate Science, Climate Modeling, Cloud Microphysics
 					</p>
@@ -225,7 +219,7 @@
 						</div>
 					</div>
 				</li>
-				<div class="abstract" id="abs1"> Modern climate projections lack adequate spatial and temporal resolution due to computational constraints. A consequence is inaccurate and imprecise predictions of critical processes such as storms. Hybrid methods that combine physics with machine learning (ML) have introduced a new generation of higher fidelity climate simulators that can sidestep Moore’s Law by outsourcing compute-hungry, short, high-resolution simulations to ML emulators. However, this hybrid ML-physics simulation approach requires domain-specific treatment and has been inaccessible to ML experts because of lack of training data and relevant, easy-to-use workflows. We present ClimSim, the largest-ever dataset designed for hybrid ML-physics research. It comprises multi-scale climate simulations, developed by a consortium of climate scientists and ML researchers. It consists of 5.7 billion pairs of multivariate input and output vectors that isolate the influence of locally-nested, high-resolution, high-fidelity physics on a host climate simulator’s macro-scale physical state. The dataset is global in coverage, spans multiple years at high sampling frequency, and is designed such that resulting emulators are compatible with downstream coupling into operational climate simulators. We implement a range of deterministic and stochastic regression baselines to highlight the ML challenges and their scoring. </div>
+				<li class="abstract" id="abs1"> Modern climate projections lack adequate spatial and temporal resolution due to computational constraints. A consequence is inaccurate and imprecise predictions of critical processes such as storms. Hybrid methods that combine physics with machine learning (ML) have introduced a new generation of higher fidelity climate simulators that can sidestep Moore’s Law by outsourcing compute-hungry, short, high-resolution simulations to ML emulators. However, this hybrid ML-physics simulation approach requires domain-specific treatment and has been inaccessible to ML experts because of lack of training data and relevant, easy-to-use workflows. We present ClimSim, the largest-ever dataset designed for hybrid ML-physics research. It comprises multi-scale climate simulations, developed by a consortium of climate scientists and ML researchers. It consists of 5.7 billion pairs of multivariate input and output vectors that isolate the influence of locally-nested, high-resolution, high-fidelity physics on a host climate simulator’s macro-scale physical state. The dataset is global in coverage, spans multiple years at high sampling frequency, and is designed such that resulting emulators are compatible with downstream coupling into operational climate simulators. We implement a range of deterministic and stochastic regression baselines to highlight the ML challenges and their scoring. </li>
 				<li>
 					<div class="row">
 						<div class="col-attr">
@@ -250,7 +244,7 @@
 						</div>
 					</div>
 				</li>
-				<div class="abstract" id="abs2"> Thorough analysis of local droplet-level interactions is crucial to better understand the microphysical processes in clouds and their effect on the global climate. High-accuracy simulations of relevant droplet size distributions from Large Eddy Simulations (LES) of bin microphysics challenge current analysis techniques due to their high dimensionality involving three spatial dimensions, time, and a continuous range of droplet sizes. Utilizing the compact latent representations from Variational Autoencoders (VAEs), we produce novel and intuitive visualizations for the organization of droplet sizes and their evolution over time beyond what is possible with clustering techniques. This greatly improves interpretation and allows us to examine aerosol-cloud interactions by contrasting simulations with different aerosol concentrations. We find that the evolution of the droplet spectrum is similar across aerosol levels but occurs at different paces. This similarity suggests that precipitation initiation processes are alike despite variations in onset times. </div>
+				<li class="abstract" id="abs2"> Thorough analysis of local droplet-level interactions is crucial to better understand the microphysical processes in clouds and their effect on the global climate. High-accuracy simulations of relevant droplet size distributions from Large Eddy Simulations (LES) of bin microphysics challenge current analysis techniques due to their high dimensionality involving three spatial dimensions, time, and a continuous range of droplet sizes. Utilizing the compact latent representations from Variational Autoencoders (VAEs), we produce novel and intuitive visualizations for the organization of droplet sizes and their evolution over time beyond what is possible with clustering techniques. This greatly improves interpretation and allows us to examine aerosol-cloud interactions by contrasting simulations with different aerosol concentrations. We find that the evolution of the droplet spectrum is similar across aerosol levels but occurs at different paces. This similarity suggests that precipitation initiation processes are alike despite variations in onset times. </li>
 			</ol>
 		</div>
 	</div>
