@@ -474,9 +474,8 @@ html.cannot-touch .project:hover span{
 	margin-top: 0;
 }
 .btn {
-	display: block;
+	display: table;
 	margin: 50px auto;
-	width: fit-content;
 	border: 1px solid #ffffff;
 	padding: 10px 30px;
 	border-radius: 6px;
