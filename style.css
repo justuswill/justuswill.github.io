@@ -106,8 +106,6 @@ nav ul li a:hover::after {
 }
 .menu-icon{
 	width: 0;
-	/* #ffffff via http://localhost:63342/justuswill.github.io/index.html */
-	filter: invert(100%) sepia(1%) saturate(677%) hue-rotate(68deg) brightness(118%) contrast(100%);
 }
 .nobr{
 	white-space: nowrap;
@@ -269,8 +267,6 @@ nav ul li a:hover::after {
 .icon{
 	width: 50px;
 	height: 50px;
-	/* #ffffff via http://localhost:63342/justuswill.github.io/index.html */
-	filter: invert(100%) sepia(1%) saturate(677%) hue-rotate(68deg) brightness(118%) contrast(100%);
 	margin-bottom: 20px;
 	margin-right: 20px;
 }
@@ -465,8 +461,6 @@ html.cannot-touch .project:hover span{
 .layer .icon-small{
 	width: 50px;
 	height: 50px;
-	/* #ffffff via http://localhost:63342/justuswill.github.io/index.html */
-	filter: invert(100%) sepia(1%) saturate(677%) hue-rotate(68deg) brightness(118%) contrast(100%);
 	margin-top: 20px;
 }
 .layer .icon-small.icon-more{
@@ -526,8 +520,6 @@ footer{
 .social .icon-small{
 	width: 30px;
 	height: 30px;
-	/* #ffffff via http://localhost:63342/justuswill.github.io/index.html */
-	filter: invert(100%) sepia(1%) saturate(677%) hue-rotate(68deg) brightness(118%) contrast(100%);
 }
 
 /* mobile adjustments */
