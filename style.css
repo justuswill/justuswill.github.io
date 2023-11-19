@@ -104,7 +104,10 @@ nav ul li a:after{
 nav ul li a:hover::after {
 	width: 100%;
 }
-.menu-icon{
+nav .menu-icon{
+	width: 0;
+}
+nav .icon-small{
 	width: 0;
 }
 .nobr{
@@ -141,9 +144,12 @@ nav ul li a:hover::after {
 .bio-col-1{
 	flex-basis: 35%;
 }
-.bio-col-1 img{
+.bio-col-1 .bio-img{
 	width: 100%;
 	border-radius: 15px;
+}
+.bio-col-1 .social{
+	margin-top: 10px;
 }
 .bio-col-2{
 	flex-basis: 60%;
@@ -279,6 +285,10 @@ nav ul li a:hover::after {
 }
 #publications .container{
 	padding-right: 5%;
+}
+#publications h1 a{
+	text-decoration: none;
+	color: var(--font-main);
 }
 .publications-year{
 	list-style: none;
@@ -492,23 +502,25 @@ footer{
 	margin-top: 100px;
 	background: #0e1a24;
 }
-.row{
+footer .row{
 	padding: 0.5rem;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
 .col-copyright{
-	flex-basis: 50%;
+	flex-basis: 45%;
 	display: flex;
 	justify-content: left;
 	align-items: center;
 }
-.col-social{
-	flex-basis: 50%;
+.col-social {
+	flex-basis: 180px;
+	justify-content: right;
+}
+.social{
 	display: flex;
 	align-items: center;
-	justify-content: right;
 	flex-wrap: wrap;
 }
 .social ul li{
@@ -604,7 +616,7 @@ footer{
 		margin-right: 50%;
 		font-size: 20px;
 	}
-	.menu-icon{
+	nav .menu-icon{
 		width: 30px;
 		height: 30px;
 		display: block;
@@ -615,7 +627,13 @@ footer{
 		top: 25px;
 		left: 25px;
 	}
-	nav ul{
+	nav ul .icon-small{
+		width: 28px;
+		height: 28px;
+		display: block;
+		cursor: pointer;
+	}
+	nav .ul1{
 		background: #ff3500F0;
 		position: fixed;
 		top: 0;
@@ -626,15 +644,24 @@ footer{
 		z-index: 2;
 		transition: right 0.5s;
 	}
-	nav ul li{
+	nav .ul1 li{
 		display: block;
 		margin: 25px;
+	}
+	nav .ul2 li{
+		display: inline-block;
+		margin: 2px 3px;
+		padding: 0;
 	}
 	nav ul li a:after{
 		background: var(--highlight-background-color);
 	}
 	.bio-col-1{
 		padding: 0 10vw;
+	}
+	.bio-col-1 .social{
+		margin-top: 0;
+		display: none;
 	}
 	.publications-year .row{
 		display: block;
@@ -741,6 +768,18 @@ html.can-touch{
 		background-position: 65%;
 		background-position-x: 65%;
 		background-position-y: 0;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.col-copyright{
+		flex-basis: 100%;
+		justify-content: left;
+	}
+	.col-social {
+		margin-top: 10px;
+		flex-basis: 100%;
+		justify-content: left;
 	}
 }
 

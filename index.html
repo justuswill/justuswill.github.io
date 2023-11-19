@@ -19,16 +19,25 @@
 <div id="header">
 	<div class="container">
 		<nav>
-			<ul>
+			<ul class="ul1">
 				<li><a href="#bio-text" class="menu-close">Bio</a></li>
 				<li><a href="#bio-text" class="nav-open menu-close" data-open="experience" data-tab="t1">Experience</a></li>
 				<li><a href="#bio-text" class="nav-open menu-close" data-open="education" data-tab="t3">Education</a></li>
 				<li><a href="#research" class="menu-close">Research</a></li>
 				<li><a href="#projects" class="menu-close">Projects</a></li>
 				<li><a href="mailto:jcwill@uci.edu">Contact</a></li>
-				<li><img class="menu-icon menu-close" id="menu-close" src="icons/close.svg" alt=""/></li>
+				<li><img class="menu-icon menu-close" id="menu-close" src="icons/close.svg" alt="Close Menu"/></li>
+				<!-- Social on Mobile -->
+				<li>
+					<ul class="ul2">
+						<li><a href="mailto:jcwill@uci.edu" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/mail.svg" alt="MAIL"/></a></li>
+						<li><a href="https://github.com/justuswill" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/github.svg" alt="CODE"/></a></li>
+						<li><a href="https://www.linkedin.com/in/justuswill/" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/linkedin.svg" alt="CODE"/></a></li>
+						<li><a href="https://scholar.google.com/citations?user=KXlA6XUAAAAJ" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/google-scholar.svg" alt="PUBS"/></a></li>
+					</ul>
+				</li>
 			</ul>
-			<img class="menu-icon menu-open" id="menu-open" src="icons/menu.svg" alt=""/>
+			<img class="menu-icon menu-open" id="menu-open" src="icons/menu.svg" alt="Open Menu"/>
 		</nav>
 		<div class="header-text">
 			<p> <span class="nobr">Machine Learning</span> Researcher <span class="nobr">/ PhD student </span></p>
@@ -43,7 +52,23 @@
 	<div class="container">
 		<div class="row">
 			<div class="bio-col-1">
-				<img src="images/user.png" alt="Surfing">
+				<img class="bio-img" src="images/user.png" alt="Surfing">
+				<div class="social">
+					<ul>
+						<li>
+							<a href="mailto:jcwill@uci.edu" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/mail.svg" alt="MAIL"/></a>
+						</li>
+						<li>
+							<a href="https://github.com/justuswill" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/github.svg" alt="GITHUB"/></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/justuswill/" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/linkedin.svg" alt="LINKEDIN"/></a>
+						</li>
+						<li>
+							<a href="https://scholar.google.com/citations?user=KXlA6XUAAAAJ" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/google-scholar.svg" alt="PUBS"/></a>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div class="bio-col-2" id="bio-text">
 				<h1 class="sub-title"> Short Bio </h1>
@@ -152,7 +177,7 @@
 		<div class="research-topics">
 			<div class="outer">
 				<div class="inner">
-					<img class="icon" src="icons/network.svg" alt=""/>
+					<img class="icon" src="icons/network.svg" alt="Networks"/>
 				</div>
 				<div class="inner">
 					<h2> Deep Generative Models </h2>
@@ -163,7 +188,7 @@
 			</div>
 			<div class="outer">
 				<div class="inner">
-					<img class="icon" src="icons/file.svg" alt=""/>
+					<img class="icon" src="icons/file.svg" alt="Save-file"/>
 				</div>
 				<div class="inner">
 					<h2> Neural Data Compression </h2>
@@ -174,7 +199,7 @@
 			</div>
 			<div class="outer">
 				<div class="inner">
-					<img class="icon" src="icons/science.svg" alt=""/>
+					<img class="icon" src="icons/science.svg" alt="Science"/>
 				</div>
 				<div class="inner">
 					<h2> Machine Learning <br> and Science </h2>
@@ -191,7 +216,7 @@
 
 <div id="publications">
 	<div class="container">
-		<h1 class="sub-title"> Publications </h1>
+		<h1 class="sub-title"><a href="https://scholar.google.com/citations?user=KXlA6XUAAAAJ" target="_blank" rel="noopener noreferrer"> Publications </a></h1>
 		<div class="publications-year">
 			<ol>
 				<li>
@@ -257,7 +282,7 @@
 		<h1 class="sub-title"> Selected Projects </h1>
 		<div class="project-list">
 			<div class="project active-project start-project">
-				<img class="bg-img" src="images/project-1.png" alt=""/>
+				<img class="bg-img" src="images/project-1.png" alt="Project 1"/>
 				<div class="layer">
 					<h3> Time Series Style Transfer </h3>
 					<span>
@@ -268,7 +293,7 @@
 				</div>
 			</div>
 			<div class="project active-project start-project">
-				<img class="bg-img" src="images/project-2.gif" alt=""/>
+				<img class="bg-img" src="images/project-2.gif" alt="Project 2"/>
 				<div class="layer">
 					<h3> Detecting Faulty Concrete </h3>
 					<span>
@@ -283,7 +308,7 @@
 				</div>
 			</div>
 			<div class="project active-project start-project">
-				<img class="bg-img" src="images/project-3.gif" alt=""/>
+				<img class="bg-img" src="images/project-3.gif" alt="Project 3"/>
 				<div class="layer">
 					<h3> Orthogonal Inductive
 						Tensor Completion </h3>
@@ -295,7 +320,7 @@
 				</div>
 			</div>
 			<div class="project">
-				<img class="bg-img" src="images/project-4.png" alt=""/>
+				<img class="bg-img" src="images/project-4.png" alt="Project 4"/>
 				<div class="layer">
 					<h3> ConvNEAT </h3>
 					<span>
@@ -306,7 +331,7 @@
 				</div>
 			</div>
 			<div class="project">
-				<img class="bg-img" src="images/project-5.png" alt=""/>
+				<img class="bg-img" src="images/project-5.png" alt="Project 5"/>
 				<div class="layer">
 					<h3> Walk Flow </h3>
 					<span>
@@ -317,7 +342,7 @@
 				</div>
 			</div>
 			<div class="project">
-				<img class="bg-img" src="images/project-6.png" alt=""/>
+				<img class="bg-img" src="images/project-6.png" alt="Project 6"/>
 				<div class="layer">
 					<h3> GPU Allocation UI </h3>
 					<span>
@@ -353,13 +378,16 @@
 			<div class="col-social social">
 				<ul>
 					<li>
-						<a href="mailto:jcwill@uci.edu" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/mail.svg" alt="CODE"/></a>
+						<a href="mailto:jcwill@uci.edu" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/mail.svg" alt="MAIL"/></a>
 					</li>
 					<li>
-						<a href="https://github.com/justuswill" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/github.svg" alt="CODE"/></a>
+						<a href="https://github.com/justuswill" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/github.svg" alt="GITHUB"/></a>
 					</li>
 					<li>
-						<a href="https://www.linkedin.com/in/justuswill/" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/linkedin.svg" alt="CODE"/></a>
+						<a href="https://www.linkedin.com/in/justuswill/" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/linkedin.svg" alt="LINKEDIN"/></a>
+					</li>
+					<li>
+						<a href="https://scholar.google.com/citations?user=KXlA6XUAAAAJ" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/google-scholar.svg" alt="PUBS"/></a>
 					</li>
 				</ul>
 			</div>
