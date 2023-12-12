@@ -128,6 +128,24 @@ nav .icon-small{
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+.pdf-btn{
+	display: table;
+	margin: 50px 20%;
+	border: 1px solid #ffffff;
+	padding: 10px 30px;
+	border-radius: 6px;
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+	transition: 0.1s;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.pdf-btn:hover{
+	color: #ff3500;
+	border-color: #ff3500;
+}
 
 /* bio */
 
@@ -225,6 +243,12 @@ nav .icon-small{
 .skl{
 	color: var(--main-color-dark);
 	font-size: var(--font-small);
+}
+.role{
+	color: var(--color-font);
+	font-size: var(--font-main);
+	display: inline-block;
+	margin-bottom: 0.5em;
 }
 .metric{
 	color: var(--color-font);
@@ -655,6 +679,10 @@ footer .row{
 	}
 	nav ul li a:after{
 		background: var(--highlight-background-color);
+	}
+	.pdf-btn{
+		top: 0;
+		margin: 50px 10%;
 	}
 	.bio-col-1{
 		padding: 0 10vw;
