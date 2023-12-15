@@ -244,11 +244,13 @@ nav .icon-small{
 	color: var(--main-color-dark);
 	font-size: var(--font-small);
 }
+.header-role{
+	display: inline-block;
+	margin-bottom: 0.5em;
+}
 .role{
 	color: var(--color-font);
 	font-size: var(--font-main);
-	display: inline-block;
-	margin-bottom: 0.5em;
 }
 .metric{
 	color: var(--color-font);
