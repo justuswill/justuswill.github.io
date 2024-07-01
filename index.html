@@ -4,11 +4,14 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> Justus Will </title>
 	<meta name="description" content="I am a Machine Learning PhD student at UC Irvine
 	interested in neural data compression, deep generative models, and
 	their application to climate science.">
 
+	<title> Justus Will </title>
+
+	<link rel="icon" type="image/svg" href="/icons/favicon.svg">
+	<link rel=”mask-icon” href="/icons/favicon.svg" color=”#ff3500">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,21 +19,31 @@
 <div id="header">
 	<div class="container">
 		<nav>
-			<ul>
-				<li><a href="#bio" class="menu-close">Bio</a></li>
-				<li><a href="#bio" class="nav-open menu-close" data-open="experience" data-tab="t1">Experience</a></li>
-				<li><a href="#bio" class="nav-open menu-close" data-open="education" data-tab="t3">Education</a></li>
-				<li><a href="#research">Research</a></li>
-				<li><a href="#projects">Projects</a></li>
+			<ul class="ul1">
+				<li><a href="#bio-text" class="menu-close">Bio</a></li>
+				<li><a href="#bio-text" class="nav-open menu-close" data-open="experience" data-tab="t1">Experience</a></li>
+				<li><a href="#bio-text" class="nav-open menu-close" data-open="education" data-tab="t3">Education</a></li>
+				<li><a href="#research" class="menu-close">Research</a></li>
+				<li><a href="#projects" class="menu-close">Projects</a></li>
 				<li><a href="mailto:jcwill@uci.edu">Contact</a></li>
-				<img class="menu-icon menu-close" id="menu-close" src="icons/close.svg" alt=""/>
+				<li><img class="menu-icon menu-close" id="menu-close" src="icons/close.svg" alt="Close Menu"/></li>
+				<!-- Social on Mobile -->
+				<li>
+					<ul class="ul2">
+						<li><a href="mailto:jcwill@uci.edu" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/mail.svg" alt="MAIL"/></a></li>
+						<li><a href="https://github.com/justuswill" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/github.svg" alt="CODE"/></a></li>
+						<li><a href="https://www.linkedin.com/in/justuswill/" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/linkedin.svg" alt="CODE"/></a></li>
+						<li><a href="https://scholar.google.com/citations?user=KXlA6XUAAAAJ" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/google-scholar.svg" alt="PUBS"/></a></li>
+					</ul>
+				</li>
 			</ul>
-			<img class="menu-icon menu-open" id="menu-open" src="icons/menu.svg" alt=""/>
+			<img class="menu-icon menu-open" id="menu-open" src="icons/menu.svg" alt="Open Menu"/>
 		</nav>
 		<div class="header-text">
 			<p> <span class="nobr">Machine Learning</span> Researcher <span class="nobr">/ PhD student </span></p>
 			<h1> Hi, I'm <span class="nobr"><span class="gradient">Justus</span> Will.</span></h1>
 		</div>
+		<a class="pdf-btn" href="files/CV_Justus_Will.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
 	</div>
 </div>
 
@@ -40,9 +53,25 @@
 	<div class="container">
 		<div class="row">
 			<div class="bio-col-1">
-				<img src="images/user.png" alt="Surfing">
+				<img class="bio-img" src="images/user.png" alt="Surfing">
+				<div class="social">
+					<ul>
+						<li>
+							<a href="mailto:jcwill@uci.edu" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/mail.svg" alt="MAIL"/></a>
+						</li>
+						<li>
+							<a href="https://github.com/justuswill" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/github.svg" alt="GITHUB"/></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/justuswill/" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/linkedin.svg" alt="LINKEDIN"/></a>
+						</li>
+						<li>
+							<a href="https://scholar.google.com/citations?user=KXlA6XUAAAAJ" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/google-scholar.svg" alt="PUBS"/></a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="bio-col-2">
+			<div class="bio-col-2" id="bio-text">
 				<h1 class="sub-title"> Short Bio </h1>
 				<p>
 					PhD student at <a href="https://uci.edu" target="_blank" rel="noopener noreferrer">University of California, Irvine </a> (UCI), advised by
@@ -54,12 +83,6 @@
 					and the application of Machine Learning to Climate Science.
 				</p>
 				<div class="tab-titles">
-					<!--
-					<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-					<p class="tab-links" onclick="opentab('languages')">Languages</p>
-					<p class="tab-links" onclick="opentab('education')">Education</p>
-					<p class="tab-links" onclick="opentab('interests')">Interests</p>
-					-->
 					<p class="tab-links" id="t1" data-open="experience">Experience</p>
 					<p class="tab-links active-link" id="t2" data-open="skills">Skills</p>
 					<p class="tab-links" id="t3" data-open="education">Education</p>
@@ -68,18 +91,32 @@
 				</div>
 				<div class="tab-contents" id="experience">
 					<ul>
-						<li><span  class="skl">2017-2020</span> <br> <span class="metric">B.Sc.</span>  Mathematics,
-							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup>, Germany &minus;
-							GPA 1.1 (Intl: <a href="https://gpa.eng.uci.edu/node/437" target="_blank" rel="noopener noreferrer">3.92</a>) </li>
-						<li><span  class="skl">2017-2020</span> <br> <span class="metric">B.Sc.</span> Computer Science,
-							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup>, Germany &minus;
-							GPA 1.1 (Intl: <a href="https://gpa.eng.uci.edu/node/437" target="_blank" rel="noopener noreferrer">3.92</a>) </li>
-						<li><span  class="skl">2020-2022</span> <br> <span class="metric">M.Sc.</span> Mathematics,
-							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup>, Germany (and
-							<a href="https://www.lunduniversity.lu.se/" target="_blank" rel="noopener noreferrer">Lund University</a>, Sweden) &minus;
-							GPA 1.1 (Intl: <a href="https://gpa.eng.uci.edu/node/437" target="_blank" rel="noopener noreferrer">3.92</a>) </li>
-						<li><span  class="skl">2020-Current</span> <br> <span class="metric">Ph.D.</span> Computer Science,
-							<a href="https://uci.edu" target="_blank" rel="noopener noreferrer">UC Irvine</a>, USA </li>
+						<li>
+							<span  class="skl">October 2020 - December 2022</span> <br>
+							<span class="header-role"><span  class="role">Research Assistant</span>,
+							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup>,
+							<a href="https://ml.cs.uni-kl.de/" target="_blank" rel="noopener noreferrer">Machine Learning Group</a></span><br>
+							Conducted various research of use in chemical process engineering and beyond.
+							Developed a new tensor completion framework to make predictions for sparse tabular data and style-transfer methods for time series. Ongoing collaboration, including as invited speaker at a Dagstuhl seminar.
+						</li>
+						<li>
+							<span  class="skl">October 2019 - May 2020</span> <br>
+							<span class="header-role"><span  class="role">Research Assistant</span>,
+							<a href="https://www.dfki.de/en/web" target="_blank" rel="noopener noreferrer">German Research Center for Artificial Intelligence (DFKI)</a></span><br>
+							Developed an evolutionary algorithm to optimize the topology and hyperparameters of convolutional networks.
+							Designed a front and back end providing <span class="metric">50+</span>
+							users intuitive access to the local GPU computation cluster.
+						</li>
+						<li>
+							<span  class="skl">September 2018 - Current</span> <br>
+							<span class="header-role"><span  class="role">Student / Teaching Assistant</span>,
+							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup> /
+							<a href="https://uci.edu" target="_blank" rel="noopener noreferrer">UC Irvine</a></span><br>
+							Supported <span class="metric">1000+</span> students across <span class="metric">10+</span>
+							courses in various roles as supervisor, mentor, advisor, educator, and examiner.
+							Topics include probability theory,
+							statistics, scientific computing, programming, machine learning, and more.
+						</li>
 						<li class="footnote"> <sup>1</sup> Since 2023:  RPTU in Kaiserslautern </li>
 					</ul>
 				</div>
@@ -121,18 +158,26 @@
 				</div>
 				<div class="tab-contents" id="education">
 					<ul>
-						<li><span  class="skl">2017-2020</span> <br> <span class="metric">B.Sc.</span>  Mathematics,
-							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup>, Germany &minus;
-							GPA 1.1 (Intl: <a href="https://gpa.eng.uci.edu/node/437" target="_blank" rel="noopener noreferrer">3.92</a>) </li>
-						<li><span  class="skl">2017-2020</span> <br> <span class="metric">B.Sc.</span> Computer Science,
-							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup>, Germany &minus;
-							GPA 1.1 (Intl: <a href="https://gpa.eng.uci.edu/node/437" target="_blank" rel="noopener noreferrer">3.92</a>) </li>
-						<li><span  class="skl">2020-2022</span> <br> <span class="metric">M.Sc.</span> Mathematics,
+						<li>
+							<span  class="skl">2023 - 2026 [est.]</span> <br> <span class="metric">Ph.D.</span> Computer Science,
+							<a href="https://uci.edu" target="_blank" rel="noopener noreferrer">UC Irvine</a>, USA
+						</li>
+						<li>
+							<span  class="skl">2020 - 2022</span> <br> <span class="metric">M.Sc.</span> Mathematics,
 							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup>, Germany (and
 							<a href="https://www.lunduniversity.lu.se/" target="_blank" rel="noopener noreferrer">Lund University</a>, Sweden) &minus;
-							GPA 1.1 (Intl: <a href="https://gpa.eng.uci.edu/node/437" target="_blank" rel="noopener noreferrer">3.92</a>) </li>
-						<li><span  class="skl">2020-Current</span> <br> <span class="metric">Ph.D.</span> Computer Science,
-							<a href="https://uci.edu" target="_blank" rel="noopener noreferrer">UC Irvine</a>, USA </li>
+							GPA <a href="https://gpa.eng.uci.edu/node/437" target="_blank" rel="noopener noreferrer">3.92</a> (Intl: 1.1)
+						</li>
+						<li>
+							<span  class="skl">2018 - 2020</span> <br> <span class="metric">B.Sc.</span> Computer Science,
+							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup>, Germany &minus;
+							GPA <a href="https://gpa.eng.uci.edu/node/437" target="_blank" rel="noopener noreferrer">3.92</a> (Intl: 1.1)
+						</li>
+						<li>
+							<span  class="skl">2017 - 2020</span> <br> <span class="metric">B.Sc.</span>  Mathematics,
+							<a href="https://rptu.de/en/home/" target="_blank" rel="noopener noreferrer">TU Kaiserslautern</a><sup>1</sup>, Germany &minus;
+							GPA <a href="https://gpa.eng.uci.edu/node/437" target="_blank" rel="noopener noreferrer">3.92</a> (Intl: 1.1)
+						</li>
 						<li class="footnote"> <sup>1</sup> Since 2023:  RPTU in Kaiserslautern </li>
 					</ul>
 				</div>
@@ -155,34 +200,37 @@
 		<div class="research-topics">
 			<div class="outer">
 				<div class="inner">
-					<img class="icon" src="icons/network.svg" alt=""/>
+					<img class="icon" src="icons/network.svg" alt="Networks"/>
 				</div>
 				<div class="inner">
 					<h2> Deep Generative Models </h2>
 					<p>
-						Variational Autoencoder, GANs, Diffusion Models.
+						such as Variational Autoencoders, Diffusion Models,
+						their applications, and how to improve their inference.
 					</p>
 				</div>
 			</div>
 			<div class="outer">
 				<div class="inner">
-					<img class="icon" src="icons/file.svg" alt=""/>
+					<img class="icon" src="icons/file.svg" alt="Save-file"/>
 				</div>
 				<div class="inner">
 					<h2> Neural Data Compression </h2>
 					<p>
-						Reverse Channel Coding, Faster
+						beats traditional codecs in compression rate.
+						I aim to make them more efficient, for example through fast Reverse Channel Coding.
 					</p>
 				</div>
 			</div>
 			<div class="outer">
 				<div class="inner">
-					<img class="icon" src="icons/science.svg" alt=""/>
+					<img class="icon" src="icons/science.svg" alt="Science"/>
 				</div>
 				<div class="inner">
-					<h2> Machine Learning </br> and Science </h2>
+					<h2> Machine Learning <br> and Science </h2>
 					<p>
-						Climate Science, Climate Modeling, Cloud Microphysics
+						such as Chemical Process Engineering and Climate Science,
+						in particular Climate Modeling and Cloud Microphysics.
 					</p>
 				</div>
 			</div>
@@ -194,7 +242,7 @@
 
 <div id="publications">
 	<div class="container">
-		<h1 class="sub-title"> Publications </h1>
+		<h1 class="sub-title"><a href="https://scholar.google.com/citations?user=KXlA6XUAAAAJ" target="_blank" rel="noopener noreferrer"> Publications </a></h1>
 		<div class="publications-year">
 			<ol>
 				<li>
@@ -203,15 +251,15 @@
 							<ul>
 								<li class="base">NeurIPS</li>
 								<li class="conference">Conference</li>
-								<li class="award">Oral</li>
+								<li class="award">Best Paper</li>
 							</ul>
 						</div>
 						<div class="col-pub">
-							<span class="title">ClimSim: An Open Large-scale Dataset for Training High-Resolution Physics Emulators in Hybrid Multi-Scale Climate Simulators </span>
+							<span class="title">ClimSim: A Large Multi-Scale Dataset For Hybrid Physics-ML Climate Emulation </span>
 							<br>
 							Sungduk Yu, Walter Hannah, Liran Peng, Jerry Lin, Mohamed Aziz Bhouri, Ritwik Gupta, Björn Lütjens, <span class="me">Justus Will</span> et al.
 							<br>
-							<span class="published"> Neural Information Processing Systems 2023</span>
+							<span class="published"> Neural Information Processing Systems 2023 (Outstanding Paper Award; top 0.05% of submissions)</span>
 							<div class="links">
 								<ul>
 									<li class="abstract-expand" data-open="abs1"> <a>ABS</a> </li>
@@ -222,7 +270,7 @@
 						</div>
 					</div>
 				</li>
-				<div class="abstract" id="abs1"> Modern climate projections lack adequate spatial and temporal resolution due to computational constraints. A consequence is inaccurate and imprecise predictions of critical processes such as storms. Hybrid methods that combine physics with machine learning (ML) have introduced a new generation of higher fidelity climate simulators that can sidestep Moore’s Law by outsourcing compute-hungry, short, high-resolution simulations to ML emulators. However, this hybrid ML-physics simulation approach requires domain-specific treatment and has been inaccessible to ML experts because of lack of training data and relevant, easy-to-use workflows. We present ClimSim, the largest-ever dataset designed for hybrid ML-physics research. It comprises multi-scale climate simulations, developed by a consortium of climate scientists and ML researchers. It consists of 5.7 billion pairs of multivariate input and output vectors that isolate the influence of locally-nested, high-resolution, high-fidelity physics on a host climate simulator’s macro-scale physical state. The dataset is global in coverage, spans multiple years at high sampling frequency, and is designed such that resulting emulators are compatible with downstream coupling into operational climate simulators. We implement a range of deterministic and stochastic regression baselines to highlight the ML challenges and their scoring. </div>
+				<li class="abstract" id="abs1"> Modern climate projections lack adequate spatial and temporal resolution due to computational constraints. A consequence is inaccurate and imprecise predictions of critical processes such as storms. Hybrid methods that combine physics with machine learning (ML) have introduced a new generation of higher fidelity climate simulators that can sidestep Moore’s Law by outsourcing compute-hungry, short, high-resolution simulations to ML emulators. However, this hybrid ML-physics simulation approach requires domain-specific treatment and has been inaccessible to ML experts because of lack of training data and relevant, easy-to-use workflows. We present ClimSim, the largest-ever dataset designed for hybrid ML-physics research. It comprises multi-scale climate simulations, developed by a consortium of climate scientists and ML researchers. It consists of 5.7 billion pairs of multivariate input and output vectors that isolate the influence of locally-nested, high-resolution, high-fidelity physics on a host climate simulator’s macro-scale physical state. The dataset is global in coverage, spans multiple years at high sampling frequency, and is designed such that resulting emulators are compatible with downstream coupling into operational climate simulators. We implement a range of deterministic and stochastic regression baselines to highlight the ML challenges and their scoring. </li>
 				<li>
 					<div class="row">
 						<div class="col-attr">
@@ -247,7 +295,7 @@
 						</div>
 					</div>
 				</li>
-				<div class="abstract" id="abs2"> Thorough analysis of local droplet-level interactions is crucial to better understand the microphysical processes in clouds and their effect on the global climate. High-accuracy simulations of relevant droplet size distributions from Large Eddy Simulations (LES) of bin microphysics challenge current analysis techniques due to their high dimensionality involving three spatial dimensions, time, and a continuous range of droplet sizes. Utilizing the compact latent representations from Variational Autoencoders (VAEs), we produce novel and intuitive visualizations for the organization of droplet sizes and their evolution over time beyond what is possible with clustering techniques. This greatly improves interpretation and allows us to examine aerosol-cloud interactions by contrasting simulations with different aerosol concentrations. We find that the evolution of the droplet spectrum is similar across aerosol levels but occurs at different paces. This similarity suggests that precipitation initiation processes are alike despite variations in onset times. </div>
+				<li class="abstract" id="abs2"> Thorough analysis of local droplet-level interactions is crucial to better understand the microphysical processes in clouds and their effect on the global climate. High-accuracy simulations of relevant droplet size distributions from Large Eddy Simulations (LES) of bin microphysics challenge current analysis techniques due to their high dimensionality involving three spatial dimensions, time, and a continuous range of droplet sizes. Utilizing the compact latent representations from Variational Autoencoders (VAEs), we produce novel and intuitive visualizations for the organization of droplet sizes and their evolution over time beyond what is possible with clustering techniques. This greatly improves interpretation and allows us to examine aerosol-cloud interactions by contrasting simulations with different aerosol concentrations. We find that the evolution of the droplet spectrum is similar across aerosol levels but occurs at different paces. This similarity suggests that precipitation initiation processes are alike despite variations in onset times. </li>
 			</ol>
 		</div>
 	</div>
@@ -260,23 +308,26 @@
 		<h1 class="sub-title"> Selected Projects </h1>
 		<div class="project-list">
 			<div class="project active-project start-project">
-				<img class="bg-img" src="images/project-1.png" alt=""/>
+				<img class="bg-img" src="images/project-1.png" alt="Project 1"/>
 				<div class="layer">
 					<h3> Time Series Style Transfer </h3>
 					<span>
-						Time Series go brrrrrrrrrrrrrrrrrrr rrrrrrrrrrrrrrrrrrrrrrrr.
+						In applications to time series, style transfer can enhance realism in simulation data,
+						improving performance on downstream tasks when high-quality training data is limited.
+						Our transformer-based approach disentangles content and style in the latent space of
+						a stylized autoencoder enabling fast and effective stylization.
 					</span>
-					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					<a href="files/Masters_Thesis.pdf" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
 					<img class="icon-small icon-more" src="icons/more.svg" alt="MORE"/>
 				</div>
 			</div>
 			<div class="project active-project start-project">
-				<img class="bg-img" src="images/project-2.gif" alt=""/>
+				<img class="bg-img" src="images/project-2.gif" alt="Project 2"/>
 				<div class="layer">
 					<h3> Detecting Faulty Concrete </h3>
 					<span>
 						Non-intrusive early detection of cracks in concrete is a crucial task in construction and maintenance.
-						In collaboration with the Fraunhofer Institute for Industrial Mathematics (ITWM) we developed a computer vision framework
+						In collaboration with the Fraunhofer Institute for Industrial Mathematics (ITWM), we developed a computer vision framework
 						that allows for fast and fully automated localization based on 3D CT scans, focusing on reliability and trustworthiness.
 						<!-- In-depth evaluation demonstrates high robustness to covariate shifts and feature visualizations make predictions explainable.
                         For this research, I was awarded a grant from the German Federal Ministry of Education and Research. -->
@@ -286,47 +337,57 @@
 				</div>
 			</div>
 			<div class="project active-project start-project">
-				<img class="bg-img" src="images/project-3.gif" alt=""/>
+				<img class="bg-img" src="images/project-3.gif" alt="Project 3"/>
 				<div class="layer">
 					<h3> Orthogonal Inductive
 						Tensor Completion </h3>
 					<span>
-						 Missing entries be no longer missing fr.
+						Predicting missing entries in sparse tabular data is a key technique, for example in recommender systems.
+						With the assumption that complex effects are dominated by interactions between
+						small sets of explanatory variables, we can make efficient predictions
+						for high-dimensional data from limited observations.
 					</span>
-					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					<a href="files/Bachelors_Thesis.pdf" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
 					<img class="icon-small icon-more" src="icons/more.svg" alt="MORE"/>
 				</div>
 			</div>
 			<div class="project">
-				<img class="bg-img" src="images/project-4.png" alt=""/>
+				<img class="bg-img" src="images/project-4.png" alt="Project 4"/>
 				<div class="layer">
 					<h3> ConvNEAT </h3>
 					<span>
-						 Why select best by hand if you don't have to do it.
+						Hyperparameter tuning of modern neural architectures is essential for final model performance
+						and usually requires expert knowledge. We developed evolutionary algorithms that automatically find
+						and tune viable architectures and demonstrate that they perform on par in image classification tasks.
 					</span>
-					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					<a href="https://github.com/justuswill/convNEAT" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
 					<img class="icon-small icon-more" src="icons/more.svg" alt="MORE"/>
 				</div>
 			</div>
 			<div class="project">
-				<img class="bg-img" src="images/project-5.png" alt=""/>
+				<img class="bg-img" src="images/project-5.png" alt="Project 5"/>
 				<div class="layer">
 					<h3> Walk Flow </h3>
 					<span>
-						 tip tap tip tap tip tap.
+						In this Hackathon project, we developed tools that support effective planning
+						of better pedestrian infrastructure and tourism services. To this end, we leverage
+						machine learning and data analysis techniques to extract actionable insights from
+						a large dataset of pedestrian flow.
 					</span>
-					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					<a href="https://github.com/1b15/walk-flow" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
 					<img class="icon-small icon-more" src="icons/more.svg" alt="MORE"/>
 				</div>
 			</div>
 			<div class="project">
-				<img class="bg-img" src="images/project-6.png" alt=""/>
+				<img class="bg-img" src="images/project-6.png" alt="Project 6"/>
 				<div class="layer">
 					<h3> GPU Allocation UI </h3>
 					<span>
-						 Kubernetes + Docker + Full-Stack Web Development = Fun
+						Based on Kubernetes and Docker, this repository provides users an intuitive graphical user interface
+						to allocate, run, and prototype on the local GPU cluster. The web-based UI is fully integrated
+						and accessible through the appropriate intranet endpoints.
 					</span>
-					<a href="https://github.com/justuswill/Betonrisse" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
+					<a href="https://github.com/justuswill/Server-Computing" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/code.svg" alt="CODE"/></a>
 					<img class="icon-small icon-more" src="icons/more.svg" alt="MORE"/>
 				</div>
 			</div>
@@ -356,15 +417,17 @@
 			<div class="col-social social">
 				<ul>
 					<li>
-						<a href="mailto:jcwill@uci.edu" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/mail.svg" alt="CODE"/></a>
+						<a href="mailto:jcwill@uci.edu" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/mail.svg" alt="MAIL"/></a>
 					</li>
 					<li>
-						<a href="https://github.com/justuswill" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/github.svg" alt="CODE"/></a>
+						<a href="https://github.com/justuswill" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/github.svg" alt="GITHUB"/></a>
 					</li>
 					<li>
-						<a href="https://www.linkedin.com/in/justuswill/" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/linkedin.svg" alt="CODE"/></a>
+						<a href="https://www.linkedin.com/in/justuswill/" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/linkedin.svg" alt="LINKEDIN"/></a>
 					</li>
-
+					<li>
+						<a href="https://scholar.google.com/citations?user=KXlA6XUAAAAJ" target="_blank" rel="noopener noreferrer"><img class="icon-small" src="icons/google-scholar.svg" alt="PUBS"/></a>
+					</li>
 				</ul>
 			</div>
 		</div>
