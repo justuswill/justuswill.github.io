@@ -122,7 +122,7 @@
 				</div>
 				<div class="tab-contents active-tab" id="skills">
 					<ul>
-						<li><span class="skl">Python</span><br> <span class="metric">Expert [7+ years]</span> &minus; Machine Learning Research, Data Analysis, Visualization,
+						<li><span class="skl">Python</span><br> <span class="metric">Expert [8+ years]</span> &minus; Machine Learning Research, Data Analysis, Visualization,
 							Hackathons, Coding Competitions, Tool and Application Development, Educator.
 							PyTorch, TensorFlow, Sklearn, Django, etc.
 						</li>
@@ -141,7 +141,7 @@
 						<li><span class="skl">HTML / CSS / JavaScript </span> <br> <span class="metric">Advanced [2+ years] </span> &minus;
 							Full-Stack Development with Python/Django Back-End.
 						</li>
-						<li><span class="skl">Others</span> <br> Git, CUDA, Slurm, Docker, Kubernetes, SQL, Google/Microsoft Office Suite, VBA, Latex, UML, etc. </li>
+						<li><span class="skl">Others</span> <br> Git, CUDA, Slurm, Docker, Kubernetes, SQL, Google/Microsoft Office Suite, VBA, Latex, UML, AI Tools, etc. </li>
 					</ul>
 				</div>
 				<div class="tab-contents" id="languages">
@@ -205,7 +205,7 @@
 				<div class="inner">
 					<h2> Deep Generative Models </h2>
 					<p>
-						such as Variational Autoencoders, Diffusion Models,
+						Variational Autoencoders, Diffusion Models,
 						their applications, and how to improve their inference.
 					</p>
 				</div>
@@ -217,8 +217,7 @@
 				<div class="inner">
 					<h2> Neural Data Compression </h2>
 					<p>
-						beats traditional codecs in compression rate.
-						I aim to make them more efficient, for example through fast Reverse Channel Coding.
+						Focus on efficiency, practicality, and scalability - for example as neural progressive codecs.
 					</p>
 				</div>
 			</div>
@@ -229,7 +228,7 @@
 				<div class="inner">
 					<h2> Machine Learning <br> and Science </h2>
 					<p>
-						such as Chemical Process Engineering and Climate Science,
+						Including Chemical Process Engineering and Climate Science,
 						in particular Climate Modeling and Cloud Microphysics.
 					</p>
 				</div>
@@ -271,6 +270,33 @@
 					</div>
 				</li>
 				<li class="abstract" id="abs1"> Modern climate projections lack adequate spatial and temporal resolution due to computational constraints. A consequence is inaccurate and imprecise predictions of critical processes such as storms. Hybrid methods that combine physics with machine learning (ML) have introduced a new generation of higher fidelity climate simulators that can sidestep Moore’s Law by outsourcing compute-hungry, short, high-resolution simulations to ML emulators. However, this hybrid ML-physics simulation approach requires domain-specific treatment and has been inaccessible to ML experts because of lack of training data and relevant, easy-to-use workflows. We present ClimSim, the largest-ever dataset designed for hybrid ML-physics research. It comprises multi-scale climate simulations, developed by a consortium of climate scientists and ML researchers. It consists of 5.7 billion pairs of multivariate input and output vectors that isolate the influence of locally-nested, high-resolution, high-fidelity physics on a host climate simulator’s macro-scale physical state. The dataset is global in coverage, spans multiple years at high sampling frequency, and is designed such that resulting emulators are compatible with downstream coupling into operational climate simulators. We implement a range of deterministic and stochastic regression baselines to highlight the ML challenges and their scoring. </li>
+
+				<li>
+					<div class="row">
+						<div class="col-attr">
+							<ul>
+								<li class="base">AGU</li>
+								<li class="conference">Conference</li>
+							</ul>
+						</div>
+						<div class="col-pub">
+							<span class="title">ClimSim-Online: A Large Multi-scale Dataset and Framework for Hybrid ML-physics Climate Emulation </span>
+							<br>
+							Sungduk Yu, Zeyuan Hu, Akshay Subramaniam, Walter Hannah, Liran Peng, Jerry Lin, Mohamed Aziz Bhouri, Ritwik Gupta, Björn Lütjens, <span class="me">Justus Will</span> et al.
+							<br>
+							<span class="published"> AGU 2024 </span>
+							<div class="links">
+								<ul>
+									<li class="abstract-expand" data-open="abs2"> <a>ABS</a> </li>
+									<li> <a href="https://arxiv.org/pdf/2306.08754v6" target="_blank" rel="noopener noreferrer">PDF</a> </li>
+									<li> <a href="https://github.com/leap-stc/ClimSim" target="_blank" rel="noopener noreferrer" > CODE</a> </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="abstract" id="abs2"> Modern climate projections lack adequate spatial and temporal resolution due to computational constraints, leading to inaccuracies in representing critical processes like thunderstorms that occur on the sub-resolution scale. Hybrid methods combining physics with machine learning (ML) offer faster, higher fidelity climate simulations by outsourcing compute-hungry, high-resolution simulations to ML emulators. However, these hybrid ML-physics simulations require domain-specific data and workflows that have been inaccessible to many ML experts. As an extension of the ClimSim dataset (Yu et al., 2024), we present ClimSim-Online, which also includes an end-to-end workflow for developing hybrid ML-physics simulators. The ClimSim dataset includes 5.7 billion pairs of multivariate input/output vectors, capturing the influence of high-resolution, high-fidelity physics on a host climate simulator’s macro-scale state. The dataset is global and spans ten years at a high sampling frequency. We provide a cross-platform, containerized pipeline to integrate ML models into operational climate simulators for hybrid testing. We also implement various ML baselines, alongside a hybrid baseline simulator, to highlight the ML challenges of building stable, skillful emulators. The data and code are publicly released to support the development of hybrid ML-physics and high-fidelity climate simulations. </li>
+
 				<li>
 					<div class="row">
 						<div class="col-attr">
@@ -284,10 +310,10 @@
 							<br>
 							<span class="me">Justus Will</span>, Andrea Jenney, Kara Lamb, Michael Pritchard et al. and Stephan Mandt
 							<br>
-							<span class="published"> Machine Learning and the Physical Sciences Workshop -  Neural Information Processing Systems 2023 </span>
+							<span class="published"> Machine Learning and the Physical Sciences Workshop - Neural Information Processing Systems 2023 </span>
 							<div class="links">
 								<ul>
-									<li class="abstract-expand" data-open="abs2"> <a>ABS</a> </li>
+									<li class="abstract-expand" data-open="abs3"> <a>ABS</a> </li>
 									<li> <a href="https://arxiv.org/pdf/2310.20168v1.pdf" target="_blank" rel="noopener noreferrer">PDF</a> </li>
 									<!-- <li> <a href="https://github.com/leap-stc/ClimSim" target="_blank" rel="noopener noreferrer" >CODE</a> </li> -->
 								</ul>
@@ -295,7 +321,61 @@
 						</div>
 					</div>
 				</li>
-				<li class="abstract" id="abs2"> Thorough analysis of local droplet-level interactions is crucial to better understand the microphysical processes in clouds and their effect on the global climate. High-accuracy simulations of relevant droplet size distributions from Large Eddy Simulations (LES) of bin microphysics challenge current analysis techniques due to their high dimensionality involving three spatial dimensions, time, and a continuous range of droplet sizes. Utilizing the compact latent representations from Variational Autoencoders (VAEs), we produce novel and intuitive visualizations for the organization of droplet sizes and their evolution over time beyond what is possible with clustering techniques. This greatly improves interpretation and allows us to examine aerosol-cloud interactions by contrasting simulations with different aerosol concentrations. We find that the evolution of the droplet spectrum is similar across aerosol levels but occurs at different paces. This similarity suggests that precipitation initiation processes are alike despite variations in onset times. </li>
+				<li class="abstract" id="abs3"> Thorough analysis of local droplet-level interactions is crucial to better understand the microphysical processes in clouds and their effect on the global climate. High-accuracy simulations of relevant droplet size distributions from Large Eddy Simulations (LES) of bin microphysics challenge current analysis techniques due to their high dimensionality involving three spatial dimensions, time, and a continuous range of droplet sizes. Utilizing the compact latent representations from Variational Autoencoders (VAEs), we produce novel and intuitive visualizations for the organization of droplet sizes and their evolution over time beyond what is possible with clustering techniques. This greatly improves interpretation and allows us to examine aerosol-cloud interactions by contrasting simulations with different aerosol concentrations. We find that the evolution of the droplet spectrum is similar across aerosol levels but occurs at different paces. This similarity suggests that precipitation initiation processes are alike despite variations in onset times. </li>
+
+				<li>
+					<div class="row">
+						<div class="col-attr">
+							<ul>
+								<li class="base">ECML</li>
+								<li class="conference">Workshop</li>
+							</ul>
+						</div>
+						<div class="col-pub">
+							<span class="title">Enhancing Realism in Batch Distillation Simulations: Data-Efficient Time Series Style Transfer with Transformers </span>
+							<br>
+							<span class="me">Justus Will</span>, Justus Arweiler, Indra Jungjohann, Jennifer Werner, Mayank Nagda et al.
+							<br>
+							<span class="published"> Machine Learning for Chemistry and Chemical Engineering Workshop - European Conference on Machine Learning 2024 </span>
+							<div class="links">
+								<ul>
+									<li class="abstract-expand" data-open="abs4"> <a>ABS</a> </li>
+									<li> <a href="files/Masters_Thesis.pdf" target="_blank" rel="noopener noreferrer">PDF</a> </li>
+									<!-- <li> <a href="https://github.com/leap-stc/ClimSim" target="_blank" rel="noopener noreferrer" >CODE</a> </li> -->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="abstract" id="abs4"> In chemical process engineering, the accuracy and realism of simulated data are crucial for the effective design and optimization of a wide range of processes. In this paper, we demonstrate the efficacy of neural style transfer methods to enhance the realism of time series data generated from simulations. Specifically, this machine learning technique allows us to learn the style characteristics of non-parallel experimental data obtained from real-world chemical plants and then use them to transform simulated data to more closely reflect the realistic behaviors and variabilities not captured by the simulation model. We propose a transformer-based architecture with a latent representation that disentangles content and style information. After training, the underlying generative model allows for fast and data-efficient stylized generation without requiring many iterations of gradient-based optimization per sample, as in other time series style transfer baselines. We show the efficacy of our approach on both synthetic data and in an application to batch distillation. </li>
+
+				<li>
+					<div class="row">
+						<div class="col-attr">
+							<ul>
+								<li class="base">NeurIPS</li>
+								<li class="conference">Workshop</li>
+							</ul>
+						</div>
+						<div class="col-pub">
+							<span class="title"> Towards Scalable Compression with Universally Quantized Diffusion Models </span>
+							<br>
+							Yibo Yang*, <span class="me">Justus Will*</span>, Stephan Mandt
+							<br>
+							<span class="published"> Machine Learning and Compression Workshop - Neural Information Processing Systems 2024 (also submitted to ICLR 2024)</span>
+							<div class="links">
+								<ul>
+									<li class="abstract-expand" data-open="abs5"> <a>ABS</a> </li>
+									<li> <a href="https://openreview.net/pdf?id=CxXGvKRDnL" target="_blank" rel="noopener noreferrer">PDF</a> </li>
+									<!-- <li> <a href="https://github.com/leap-stc/ClimSim" target="_blank" rel="noopener noreferrer" >CODE</a> </li> -->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="abstract" id="abs5"> Diffusion probabilistic models have achieved mainstream success in many generative modeling tasks, from image generation to inverse problem solving. A distinct feature of these models is that they correspond to deep hierarchical latent variable models optimizing a variational evidence lower bound (ELBO) on the data likelihood. Drawing on a basic connection between likelihood modeling and compression, we explore the potential of diffusion models for progressive coding, resulting in a sequence of bits that can be incrementally transmitted and decoded with progressively improving reconstruction quality. Unlike prior work based on Gaussian diffusion or conditional diffusion models, we propose a new form of diffusion model with uniform noise in the forward process, whose negative ELBO corresponds to the end-to-end compression cost using universal quantization. We obtain promising first results on image compression, achieving competitive ratedistortion-realism results on a wide range of bit-rates with a single model, bringing neural codecs a step closer to practical deployment.
+				</li>
+
 			</ol>
 		</div>
 	</div>
